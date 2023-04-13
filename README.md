@@ -1,2 +1,1 @@
-# marvelous-adventures
-marvelous-adventures
+# Marvelous Adventures
