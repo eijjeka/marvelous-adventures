@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/marvelous-adventures/static/css/main.e6c13ad2.css",
-    "main.js": "/marvelous-adventures/static/js/main.ca2e2edb.js",
+    "main.css": "/marvelous-adventures/static/css/main.8441b54e.css",
+    "main.js": "/marvelous-adventures/static/js/main.4037d109.js",
+    "static/media/logo.svg": "/marvelous-adventures/static/media/logo.bdfd3c47c33e710adbdb4e08dfd2e4e5.svg",
     "index.html": "/marvelous-adventures/index.html",
-    "main.e6c13ad2.css.map": "/marvelous-adventures/static/css/main.e6c13ad2.css.map",
-    "main.ca2e2edb.js.map": "/marvelous-adventures/static/js/main.ca2e2edb.js.map"
+    "main.8441b54e.css.map": "/marvelous-adventures/static/css/main.8441b54e.css.map",
+    "main.4037d109.js.map": "/marvelous-adventures/static/js/main.4037d109.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.ca2e2edb.js"
+    "static/css/main.8441b54e.css",
+    "static/js/main.4037d109.js"
   ]
 }
