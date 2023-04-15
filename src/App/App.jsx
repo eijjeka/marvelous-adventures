@@ -1,7 +1,9 @@
+import { Layout } from "./components/Layout";
+
 export const App = () => {
   return (
-    <div className="App">
-      <h1>Hi</h1>
-    </div>
+    <>
+      <Layout />
+    </>
   );
 };
