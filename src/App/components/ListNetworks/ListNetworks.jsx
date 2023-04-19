@@ -5,17 +5,17 @@ import logo from "App/assets/images/sprite.svg";
 export const ListNetworks = () => {
   return (
     <List>
-      <Item pg="8px 13px">
+      <Item>
         <LinkItem>
           <IconSvg path={logo + "#facebook"} wh={8} hg={15} />
         </LinkItem>
       </Item>
-      <Item pg="8px 10px">
+      <Item>
         <LinkItem>
           <IconSvg path={logo + "#istagram"} wh={14} hg={14} />
         </LinkItem>
       </Item>
-      <Item pg="8px 10px">
+      <Item>
         <LinkItem>
           <IconSvg path={logo + "#twitter"} wh={14} hg={14} />
         </LinkItem>

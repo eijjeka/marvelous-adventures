@@ -10,16 +10,18 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  padding: ${({ pg }) => pg || 0};
-
-  border: 1px solid rgba(250, 250, 250, 0.15);
-  border-radius: 6px;
-
   :not(:last-child) {
     margin-right: 14px;
   }
 `;
 
 export const LinkItem = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
   text-decoration: none;
+  border: 1px solid rgba(250, 250, 250, 0.15);
+  border-radius: 6px;
 `;
