@@ -1,14 +1,32 @@
 {
   "files": {
-    "main.css": "/marvelous-adventures/static/css/main.8441b54e.css",
-    "main.js": "/marvelous-adventures/static/js/main.4037d109.js",
-    "static/media/logo.svg": "/marvelous-adventures/static/media/logo.bdfd3c47c33e710adbdb4e08dfd2e4e5.svg",
+    "main.css": "/marvelous-adventures/static/css/main.92a37d29.css",
+    "main.js": "/marvelous-adventures/static/js/main.f9aac0f5.js",
+    "static/media/SFProText-Regular.ttf": "/marvelous-adventures/static/media/SFProText-Regular.cc7ed75809867295f613.ttf",
+    "static/media/Poppins-Regular.ttf": "/marvelous-adventures/static/media/Poppins-Regular.a2c18a155db081c49d9b.ttf",
+    "static/media/Poppins-Medium.ttf": "/marvelous-adventures/static/media/Poppins-Medium.948fb9dbf93582f2bbd1.ttf",
+    "static/media/SFProText-Regular.woff": "/marvelous-adventures/static/media/SFProText-Regular.87d722f246f41640c8de.woff",
+    "static/media/GTAmerica-Medium.ttf": "/marvelous-adventures/static/media/GTAmerica-Medium.0ddf24f107282266a55e.ttf",
+    "static/media/SFProText-Regular.woff2": "/marvelous-adventures/static/media/SFProText-Regular.ebbb25d0408384a6398c.woff2",
+    "static/media/Poppins-Regular.woff": "/marvelous-adventures/static/media/Poppins-Regular.4726ff7ff16fa523a0c8.woff",
+    "static/media/Poppins-Medium.woff": "/marvelous-adventures/static/media/Poppins-Medium.387e9f17ae35a651d571.woff",
+    "static/media/GTAmerica-Medium.woff": "/marvelous-adventures/static/media/GTAmerica-Medium.aad54a00e857f76eb0f0.woff",
+    "static/media/NeueMontreal-Medium.ttf": "/marvelous-adventures/static/media/NeueMontreal-Medium.311e28747c61f93adfc3.ttf",
+    "static/media/Poppins-Regular.woff2": "/marvelous-adventures/static/media/Poppins-Regular.31449d16f5a876ca493b.woff2",
+    "static/media/Poppins-Medium.woff2": "/marvelous-adventures/static/media/Poppins-Medium.d3134cc59857029e4300.woff2",
+    "static/media/GTAmerica-Medium.woff2": "/marvelous-adventures/static/media/GTAmerica-Medium.87b2a3ca8cf618406546.woff2",
+    "static/media/NeueMontreal-Medium.woff": "/marvelous-adventures/static/media/NeueMontreal-Medium.7cb2840cea8f36df2a82.woff",
+    "static/media/HelveticaNeueCyr-Roman.ttf": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.30833b98483699c9d3a8.ttf",
+    "static/media/NeueMontreal-Medium.woff2": "/marvelous-adventures/static/media/NeueMontreal-Medium.f7260c49d75c006801c1.woff2",
+    "static/media/sprite.svg": "/marvelous-adventures/static/media/sprite.6d24e0544056439c12066516dacd72e9.svg",
+    "static/media/HelveticaNeueCyr-Roman.woff": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.d5ae05d4ba6fb85421b0.woff",
+    "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
-    "main.8441b54e.css.map": "/marvelous-adventures/static/css/main.8441b54e.css.map",
-    "main.4037d109.js.map": "/marvelous-adventures/static/js/main.4037d109.js.map"
+    "main.92a37d29.css.map": "/marvelous-adventures/static/css/main.92a37d29.css.map",
+    "main.f9aac0f5.js.map": "/marvelous-adventures/static/js/main.f9aac0f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.8441b54e.css",
-    "static/js/main.4037d109.js"
+    "static/css/main.92a37d29.css",
+    "static/js/main.f9aac0f5.js"
   ]
 }
