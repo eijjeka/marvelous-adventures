@@ -1,3 +1,5 @@
+import { Image } from "./ContainerImage.styled";
+
 export const ContainerImage = ({ path, alt, ...props }) => {
-  return <img src={path} alt={alt} {...props} />;
+  return <Image src={path} alt={alt} {...props} />;
 };

@@ -1,0 +1,1 @@
+export { IconSvg } from "./IconSvg";
