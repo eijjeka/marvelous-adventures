@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvelous-adventures/static/css/main.92a37d29.css",
-    "main.js": "/marvelous-adventures/static/js/main.f9aac0f5.js",
+    "main.js": "/marvelous-adventures/static/js/main.431cb734.js",
     "static/media/SFProText-Regular.ttf": "/marvelous-adventures/static/media/SFProText-Regular.cc7ed75809867295f613.ttf",
     "static/media/Poppins-Regular.ttf": "/marvelous-adventures/static/media/Poppins-Regular.a2c18a155db081c49d9b.ttf",
     "static/media/Poppins-Medium.ttf": "/marvelous-adventures/static/media/Poppins-Medium.948fb9dbf93582f2bbd1.ttf",
@@ -23,10 +23,10 @@
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
     "main.92a37d29.css.map": "/marvelous-adventures/static/css/main.92a37d29.css.map",
-    "main.f9aac0f5.js.map": "/marvelous-adventures/static/js/main.f9aac0f5.js.map"
+    "main.431cb734.js.map": "/marvelous-adventures/static/js/main.431cb734.js.map"
   },
   "entrypoints": [
     "static/css/main.92a37d29.css",
-    "static/js/main.f9aac0f5.js"
+    "static/js/main.431cb734.js"
   ]
 }
