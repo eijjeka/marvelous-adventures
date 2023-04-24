@@ -63,14 +63,14 @@ const theme = {
 
 export const App = () => {
   return (
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Global />
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<RandomCharacters />} />
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-       </ThemeProvider>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<RandomCharacters />} />
+          <Route index element={<Hero />} />
+        </Route>
+      </Routes>
+    </ThemeProvider>
   );
 };
