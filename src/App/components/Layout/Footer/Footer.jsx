@@ -6,7 +6,7 @@ import {
   InnerWrapper,
   PolicyWrapper,
 } from "./Footer.styled";
-import { ListNetworks } from "App/components/ListNetworks";
+import { ListNetworks } from "App/components/ListSocialNetworks";
 import { Logo } from "App/shared/Logo";
 
 export const Footer = () => {

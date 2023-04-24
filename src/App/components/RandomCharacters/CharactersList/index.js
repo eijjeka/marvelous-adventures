@@ -1,0 +1,1 @@
+export { CharactersList } from "./CharactersList";

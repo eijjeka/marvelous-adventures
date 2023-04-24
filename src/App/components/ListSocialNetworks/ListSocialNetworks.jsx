@@ -1,4 +1,4 @@
-import { List, Item, LinkItem } from "./ListNetworks.styled";
+import { List, Item, LinkItem } from "./ListSocialNetworks.styled";
 import { IconSvg } from "App/shared/IconSvg";
 import logo from "App/assets/images/sprite.svg";
 
