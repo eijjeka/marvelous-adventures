@@ -1,12 +1,16 @@
 {
   "files": {
     "main.css": "/marvelous-adventures/static/css/main.92a37d29.css",
-    "main.js": "/marvelous-adventures/static/js/main.431cb734.js",
+    "main.js": "/marvelous-adventures/static/js/main.db8b5f3f.js",
+    "static/media/black-1@2x.jpg": "/marvelous-adventures/static/media/black-1@2x.e953b41ca890f17d8665.jpg",
     "static/media/SFProText-Regular.ttf": "/marvelous-adventures/static/media/SFProText-Regular.cc7ed75809867295f613.ttf",
+    "static/media/black-m-2@2x.jpg": "/marvelous-adventures/static/media/black-m-2@2x.f53f18a8827dac6d0d7a.jpg",
+    "static/media/black-1.jpg": "/marvelous-adventures/static/media/black-1.c38e60ecb56dc3f20db5.jpg",
     "static/media/Poppins-Regular.ttf": "/marvelous-adventures/static/media/Poppins-Regular.a2c18a155db081c49d9b.ttf",
     "static/media/Poppins-Medium.ttf": "/marvelous-adventures/static/media/Poppins-Medium.948fb9dbf93582f2bbd1.ttf",
     "static/media/SFProText-Regular.woff": "/marvelous-adventures/static/media/SFProText-Regular.87d722f246f41640c8de.woff",
     "static/media/GTAmerica-Medium.ttf": "/marvelous-adventures/static/media/GTAmerica-Medium.0ddf24f107282266a55e.ttf",
+    "static/media/black-m-2.jpg": "/marvelous-adventures/static/media/black-m-2.9468f206b9afafb99820.jpg",
     "static/media/SFProText-Regular.woff2": "/marvelous-adventures/static/media/SFProText-Regular.ebbb25d0408384a6398c.woff2",
     "static/media/Poppins-Regular.woff": "/marvelous-adventures/static/media/Poppins-Regular.4726ff7ff16fa523a0c8.woff",
     "static/media/Poppins-Medium.woff": "/marvelous-adventures/static/media/Poppins-Medium.387e9f17ae35a651d571.woff",
@@ -23,10 +27,10 @@
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
     "main.92a37d29.css.map": "/marvelous-adventures/static/css/main.92a37d29.css.map",
-    "main.431cb734.js.map": "/marvelous-adventures/static/js/main.431cb734.js.map"
+    "main.db8b5f3f.js.map": "/marvelous-adventures/static/js/main.db8b5f3f.js.map"
   },
   "entrypoints": [
     "static/css/main.92a37d29.css",
-    "static/js/main.431cb734.js"
+    "static/js/main.db8b5f3f.js"
   ]
 }
