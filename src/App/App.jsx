@@ -1,6 +1,8 @@
 import { Layout } from "./components/Layout";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Hero } from "./components/Layout/Hero/Hero";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { Routes, Route } from "react-router-dom";
+import { RandomCharacters } from "./components/RandomCharacters";
 
 const Global = createGlobalStyle`
 :root {
@@ -61,11 +63,14 @@ const theme = {
 
 export const App = () => {
   return (
-    <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
       <Global />
-      <Layout>
-        <Hero></Hero>
-      </Layout>
-    </ThemeProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<RandomCharacters />} />
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
+       </ThemeProvider>
   );
 };

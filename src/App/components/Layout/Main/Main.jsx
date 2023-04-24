@@ -1,1 +1,3 @@
-export const Main = ({ children }) => <main>{children}</main>;
+import { Wrapper } from "./Main.styled";
+
+export const Main = ({ children }) => <Wrapper>{children}</Wrapper>;
