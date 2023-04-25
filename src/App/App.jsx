@@ -66,7 +66,15 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <Global />
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Hero />
+              <RandomCharacters />
+            </Layout>
+          }
+        >
           <Route index element={<RandomCharacters />} />
           <Route index element={<Hero />} />
         </Route>
