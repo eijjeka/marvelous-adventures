@@ -1,9 +1,7 @@
 import { Layout } from "./components/Layout";
-import { Hero } from "./components/Layout/Hero/Hero";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Routes, Route } from "react-router-dom";
-import { RandomCharacters } from "./components/RandomCharacters";
-
+import { HomePage } from "./views/Homepage";
 const Global = createGlobalStyle`
 :root {
   --main-text-color: #FAFAFA;
@@ -67,8 +65,7 @@ export const App = () => {
       <Global />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<RandomCharacters />} />
-          <Route index element={<Hero />} />
+          <Route index element={<HomePage />} />
         </Route>
       </Routes>
     </ThemeProvider>

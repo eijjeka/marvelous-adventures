@@ -1,9 +1,6 @@
 import { Container } from "App/shared/Container/Container";
 import { Button } from "App/shared/Button/Button";
-import {
-  HeroSection,
-  StyledImage,
-} from "App/components/Layout/Hero/Hero.styled";
+import { HeroSection, StyledImage } from "App/components/Hero/Hero.styled";
 
 import { HeroButton } from "./HeroButton";
 
@@ -14,7 +11,7 @@ import {
   ColorButton,
 } from "./Hero.styled";
 
-import { Wrapper } from "./../../../shared/Wrapper/Wrapper";
+import { Wrapper } from "../../shared/Wrapper/Wrapper";
 import pathImgBlack1 from "App/assets/images/black-1.jpg";
 import pathImgBlack1_2x from "App/assets/images/black-1@2x.jpg";
 import pathImgBlack2 from "App/assets/images/black-m-2.jpg";
