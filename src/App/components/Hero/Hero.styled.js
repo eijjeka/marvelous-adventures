@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Section } from "./../../../shared/Section/Section";
+import { Section } from "../../shared/Section/Section";
 import { Button } from "App/shared/Button/Button";
 
 export const HeroSection = styled(Section)`
