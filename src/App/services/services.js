@@ -8,7 +8,7 @@ const ts = new Date().getTime();
 
 const hash = md5(ts + privateKey + publicKey);
 
-axios.defaults.baseURL = "http://gateway.marvel.com/v1/public/";
+axios.defaults.baseURL = "https://gateway.marvel.com/v1/public/";
 
 export function getRandomCharacters() {
   const offset = Math.floor(Math.random() * 1400);
