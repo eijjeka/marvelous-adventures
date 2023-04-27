@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvelous-adventures/static/css/main.92a37d29.css",
-    "main.js": "/marvelous-adventures/static/js/main.6da3dba3.js",
+    "main.js": "/marvelous-adventures/static/js/main.f25c28ad.js",
     "static/media/black-1@2x.jpg": "/marvelous-adventures/static/media/black-1@2x.e953b41ca890f17d8665.jpg",
     "static/media/SFProText-Regular.ttf": "/marvelous-adventures/static/media/SFProText-Regular.cc7ed75809867295f613.ttf",
     "static/media/black-m-2@2x.jpg": "/marvelous-adventures/static/media/black-m-2@2x.f53f18a8827dac6d0d7a.jpg",
@@ -22,15 +22,15 @@
     "static/media/NeueMontreal-Medium.woff": "/marvelous-adventures/static/media/NeueMontreal-Medium.7cb2840cea8f36df2a82.woff",
     "static/media/HelveticaNeueCyr-Roman.ttf": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.30833b98483699c9d3a8.ttf",
     "static/media/NeueMontreal-Medium.woff2": "/marvelous-adventures/static/media/NeueMontreal-Medium.f7260c49d75c006801c1.woff2",
-    "static/media/sprite.svg": "/marvelous-adventures/static/media/sprite.6d24e0544056439c12066516dacd72e9.svg",
+    "static/media/sprite.svg": "/marvelous-adventures/static/media/sprite.09e90306c31d616eaafc8b96639e8e1d.svg",
     "static/media/HelveticaNeueCyr-Roman.woff": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.d5ae05d4ba6fb85421b0.woff",
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
     "main.92a37d29.css.map": "/marvelous-adventures/static/css/main.92a37d29.css.map",
-    "main.6da3dba3.js.map": "/marvelous-adventures/static/js/main.6da3dba3.js.map"
+    "main.f25c28ad.js.map": "/marvelous-adventures/static/js/main.f25c28ad.js.map"
   },
   "entrypoints": [
     "static/css/main.92a37d29.css",
-    "static/js/main.6da3dba3.js"
+    "static/js/main.f25c28ad.js"
   ]
 }
