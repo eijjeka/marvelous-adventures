@@ -3,30 +3,21 @@ import { Section } from "../../shared/Section/Section";
 import { Button } from "App/shared/Button/Button";
 
 export const HeroSection = styled(Section)`
-  .subtitle {
-    margin-bottom: 14px;
-    color: var(--secondary-text-color);
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.29;
-    @media ${(props) => props.theme.media.tablet} {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+  @media ${(props) => props.theme.media.tablet} {
+    padding-top: 146px;
+  }
+  @media ${(props) => props.theme.media.tablet} {
+    padding-top: 210px;
+    padding-bottom: 185px;
   }
 
-  h1 {
-    margin-bottom: 16px;
-    color: var(--main-text-color);
-    font-weight: 500;
-    font-size: 44px;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    @media ${(props) => props.theme.media.tablet} {
-      font-size: 80px;
+  & > div {
+    @media ${(props) => props.theme.media.desktop} {
+      display: flex;
+    }
+    @media ${(props) => props.theme.media.desktop} {
     }
   }
-
   p {
     margin-bottom: 20px;
     color: var(--main-text-color);
@@ -39,6 +30,11 @@ export const HeroSection = styled(Section)`
     }
   }
 
+  .hero-text {
+    @media ${(props) => props.theme.media.tablet} {
+      width: 473px;
+    }
+  }
   span {
     display: inline-block;
     margin-top: 14px;
@@ -58,15 +54,70 @@ export const HeroSection = styled(Section)`
   .description-hero {
     width: 125px;
     margin-bottom: 0;
+    font-family: "Helvetica Neue";
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: -0.02em;
     color: var(--secondary-text-color);
+
+    @media ${(props) => props.theme.media.tablet} {
+    }
+    @media ${(props) => props.theme.media.desktop} {
+      width: 195px;
+    }
+  }
+`;
+
+export const WrapForMainContent = styled.div`
+  @media ${(props) => props.theme.media.desktop} {
+  }
+`;
+export const SubTitle = styled.p`
+  margin-bottom: 14px;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.29;
+  @media ${(props) => props.theme.media.tablet} {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+`;
+
+export const MainTitle = styled.h1`
+  margin-bottom: 16px;
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  @media ${(props) => props.theme.media.tablet} {
+    font-size: 80px;
+  }
+  @media ${(props) => props.theme.media.desktop} {
+    width: 538px;
   }
 `;
 
 export const StyledWrapperBtn = styled.div`
   margin-bottom: 40px;
+  @media ${(props) => props.theme.media.tablet} {
+    margin-bottom: 32px;
+  }
+`;
+export const WrapperImages = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media ${(props) => props.theme.media.tablet} {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 32px;
+  }
+  @media ${(props) => props.theme.media.desktop} {
+    position: absolute;
+    right: 0;
+    top: -146px;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -81,12 +132,30 @@ export const StyledImage = styled.img`
   }
 `;
 
+export const DescriptionWrapper = styled.div`
+  display: flex;
+  gap: 55px;
+
+  @media ${(props) => props.theme.media.tablet} {
+  }
+  @media ${(props) => props.theme.media.desktop} {
+    gap: 68px;
+  }
+`;
+
 export const StyledWrapperImg = styled.div`
   position: relative;
   z-index: 2;
   align-self: flex-end;
   width: 237px;
   margin-top: 20px;
+  @media ${(props) => props.theme.media.tablet} {
+    width: 336px;
+    margin-top: 0;
+  }
+  @media ${(props) => props.theme.media.desktop} {
+    padding-bottom: 96px;
+  }
 `;
 
 export const StyledHeroButton = styled.button`
@@ -110,6 +179,7 @@ export const StyledHeroButton = styled.button`
   @media ${(props) => props.theme.media.tablet} {
     width: 144px;
     height: 144px;
+    top: 380px;
   }
 
   ${(props) =>
@@ -150,8 +220,9 @@ export const StyledGradientBg = styled.div`
   filter: blur(47px);
   border-radius: 200000px;
   @media ${(props) => props.theme.media.tablet} {
-    width: 144px;
-    height: 144px;
+    width: 332px;
+    height: 300px;
+    bottom: 0;
   }
   ${(props) =>
     props.panther &&
