@@ -1,12 +1,4 @@
 import { Button } from "App/shared/Button/Button";
-import {
-  StyledImage,
-  SubTitle,
-  MainTitle,
-  DescriptionWrapper,
-  WrapperImages,
-} from "App/components/Hero/Hero.styled";
-
 import { HeroButton } from "./HeroButton";
 
 import {
@@ -15,12 +7,14 @@ import {
   StyledGradientBg,
   ColorButton,
   WrapForMainContent,
+  StyledImage,
+  SubTitle,
+  MainTitle,
+  DescriptionWrapper,
+  WrapperImages,
 } from "./Hero.styled";
 
-import pathImgBlack1 from "App/assets/images/black-1.jpg";
-import pathImgBlack1_2x from "App/assets/images/black-1@2x.jpg";
-import pathImgBlack2 from "App/assets/images/black-m-2.jpg";
-import pathImgBlack2_2x from "App/assets/images/black-m-2@2x.jpg";
+import getPathImg from "App/services/getPathImg";
 import styled from "styled-components";
 
 const Item = styled.li``;
@@ -47,16 +41,16 @@ export const HeroItem = (props) => {
       </WrapForMainContent>
       <WrapperImages dis={"flex"} fldir={"column"}>
         <StyledImage
-          srcSet={`${pathImgBlack1} 1x, ${pathImgBlack1_2x} 2x`}
-          src={pathImgBlack1}
-          alt="hero black"
+          srcSet={`${getPathImg.panther1} 1x, ${getPathImg.panther1_2x} 2x`}
+          src={getPathImg.panther1}
+          alt="hero panther"
           width={237}
           height={343}
         />
         <StyledWrapperImg>
           <StyledImage
-            srcSet={`${pathImgBlack2} 1x, ${pathImgBlack2_2x} 2x`}
-            src={pathImgBlack2}
+            srcSet={`${getPathImg.panther2} 1x, ${getPathImg.panther2_2x} 2x`}
+            src={getPathImg.panther2}
             alt="hero black"
             width={237}
             height={343}
