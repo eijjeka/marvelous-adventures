@@ -7,6 +7,10 @@ export const List = styled.ul`
   margin: 0;
   margin-top: 14px;
   list-style: none;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const Item = styled.li`
@@ -24,4 +28,9 @@ export const LinkItem = styled(Link)`
   text-decoration: none;
   border: 1px solid rgba(250, 250, 250, 0.15);
   border-radius: 6px;
+
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;

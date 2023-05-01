@@ -1,23 +1,27 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Container } from "App/shared/Container/Container";
 
-export const Wrapper = styled.footer``;
-
-export const InnerWrapper = styled.div`
+export const InnerWrapper = styled(Container)`
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-  padding: 40px 20px 40px 20px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
 `;
 
 export const List = styled.ul`
   padding: 0;
   margin: 0;
-
   list-style: none;
 `;
-
-export const ListItem = styled.li``;
 
 export const LinkItem = styled(Link)`
   font-family: "Poppins";
@@ -26,6 +30,10 @@ export const LinkItem = styled(Link)`
   line-height: 1.29;
   color: #fafafa;
   text-decoration: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const PolicyWrapper = styled.p`

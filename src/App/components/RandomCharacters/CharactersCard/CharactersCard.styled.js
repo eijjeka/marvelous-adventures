@@ -10,22 +10,17 @@ export const CardTitle = styled.h3`
   margin-bottom: 16px;
 
   font-family: "Poppins";
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
-
-  text-align: center;
   letter-spacing: -0.02em;
 
-  color: #fafafa;
-`;
+  color: ${({ active, id }) => (active.id === id ? "#4B50AD" : "#fafafa")};
 
-export const CardImg = styled.img`
-  width: 335px;
-  height: 335px;
-  margin-bottom: 32px;
-  border-radius: 8px;
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 1;
+  }
 `;
 
 export const CardText = styled.p`
@@ -36,5 +31,11 @@ export const CardText = styled.p`
   font-size: 14px;
   line-height: 1.29;
 
-  color: rgba(250, 250, 250, 0.5);
+  color: ${({ active, id }) =>
+    active.id === id ? "#4B50AD" : "rgba(250, 250, 250, 0.5)"};
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.12;
+  }
 `;

@@ -1,9 +1,9 @@
 import { Layout } from "./components/Layout";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "./views/Homepage";
+import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/GlobalStyles/GlobalStyles";
-import theme from "./services/theme";
 
 export const App = () => {
   return (
@@ -14,6 +14,7 @@ export const App = () => {
           <Route index element={<HomePage />} />
         </Route>
       </Routes>
+      <NotificationContainer />
     </ThemeProvider>
   );
 };
