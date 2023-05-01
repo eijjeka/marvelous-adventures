@@ -1,7 +1,9 @@
 import { Layout } from "./components/Layout";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "./views/Homepage";
+import { NotificationContainer } from "react-notifications";
+
 const Global = createGlobalStyle`
 :root {
   --main-text-color: #FAFAFA;
@@ -68,6 +70,7 @@ export const App = () => {
           <Route index element={<HomePage />} />
         </Route>
       </Routes>
+      <NotificationContainer />
     </ThemeProvider>
   );
 };
