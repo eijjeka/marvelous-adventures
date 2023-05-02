@@ -1,1 +1,0 @@
-export { IconSvg } from "./IconSvg";

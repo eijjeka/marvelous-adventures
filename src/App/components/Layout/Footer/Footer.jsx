@@ -1,34 +1,27 @@
-import {
-  Wrapper,
-  List,
-  ListItem,
-  LinkItem,
-  InnerWrapper,
-  PolicyWrapper,
-} from "./Footer.styled";
+import { List, LinkItem, InnerWrapper, PolicyWrapper } from "./Footer.styled";
 import { ListNetworks } from "App/components/ListSocialNetworks";
 import { Logo } from "App/shared/Logo";
 
 export const Footer = () => {
   return (
-    <Wrapper>
+    <footer>
       <InnerWrapper>
         {/* logo */}
         <Logo />
         {/* list link to page in footer */}
         <List>
-          <ListItem>
+          <li>
             <LinkItem>Characters</LinkItem>
-          </ListItem>
-          <ListItem>
+          </li>
+          <li>
             <LinkItem>Comics</LinkItem>
-          </ListItem>
+          </li>
         </List>
         {/* list social network  */}
         <ListNetworks />
       </InnerWrapper>
       {/* policy text */}
       <PolicyWrapper>Privacy Policy Public Offering Agreement</PolicyWrapper>
-    </Wrapper>
+    </footer>
   );
 };

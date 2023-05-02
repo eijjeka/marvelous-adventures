@@ -1,38 +1,40 @@
 import { Wrapper } from "./CharactersList.styled";
 import { CharactersCard } from "../CharactersCard";
 import { useState } from "react";
+import { CardImg } from "./CharactersList.styled";
+import { useEffect } from "react";
 
 export const CharactersList = ({ data }) => {
   const [activeCard, setActiveCard] = useState(data[0]);
 
-  function timerSlider() {
-    for (let i = 0; i < data.length; i++) {
-      console.log(data[i]);
-      if (data.length - 1 === i) {
-        return setActiveCard(data[0]);
-      } else if (activeCard.id === data[i].id) {
-        return setActiveCard(data[i + 1]);
-      }
-    }
-  }
-
-  setTimeout(() => timerSlider(), 3500);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCard((prevActiveCard) => {
+        const activeIndex = data.findIndex(
+          (card) => card.id === prevActiveCard.id
+        );
+        const nextIndex = (activeIndex + 1) % data.length;
+        return data[nextIndex];
+      });
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [data]);
 
   return (
-    data && (
-      <>
-        <img
-          width={330}
-          height={350}
-          src={`${activeCard.thumbnail.path}.${activeCard.thumbnail.extension}`}
-          alt="card"
-        />
-        <Wrapper>
-          {data.map((el) => (
-            <CharactersCard key={el.id} item={el} handleClick={setActiveCard} />
-          ))}
-        </Wrapper>
-      </>
-    )
+    <>
+      <CardImg
+        src={`${activeCard.thumbnail.path}.${activeCard.thumbnail.extension}`}
+      />
+      <Wrapper>
+        {data.map((el) => (
+          <CharactersCard
+            active={activeCard}
+            key={el.id}
+            item={el}
+            handleClick={setActiveCard}
+          />
+        ))}
+      </Wrapper>
+    </>
   );
 };
