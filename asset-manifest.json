@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/marvelous-adventures/static/css/main.cef54e02.css",
-    "main.js": "/marvelous-adventures/static/js/main.cde67147.js",
+    "main.css": "/marvelous-adventures/static/css/main.92a37d29.css",
+    "main.js": "/marvelous-adventures/static/js/main.87fc69d1.js",
     "static/media/black-1@2x.jpg": "/marvelous-adventures/static/media/black-1@2x.e953b41ca890f17d8665.jpg",
+    "static/media/spider-1@2x.jpg": "/marvelous-adventures/static/media/spider-1@2x.971a6614ecab5c75380b.jpg",
+    "static/media/hulk-1@2x.jpg": "/marvelous-adventures/static/media/hulk-1@2x.43d3e786a5251371021f.jpg",
+    "static/media/spider-m-2@2x.jpg": "/marvelous-adventures/static/media/spider-m-2@2x.bc918074738bca1f96a5.jpg",
     "static/media/SFProText-Regular.ttf": "/marvelous-adventures/static/media/SFProText-Regular.cc7ed75809867295f613.ttf",
+    "static/media/hulk-m-2@2x.jpg": "/marvelous-adventures/static/media/hulk-m-2@2x.eed03d795ac17b47fe03.jpg",
     "static/media/black-m-2@2x.jpg": "/marvelous-adventures/static/media/black-m-2@2x.f53f18a8827dac6d0d7a.jpg",
     "static/media/black-1.jpg": "/marvelous-adventures/static/media/black-1.c38e60ecb56dc3f20db5.jpg",
+    "static/media/spider-1.jpg": "/marvelous-adventures/static/media/spider-1.8b5264e4f489076dc645.jpg",
     "static/media/Poppins-Regular.ttf": "/marvelous-adventures/static/media/Poppins-Regular.a2c18a155db081c49d9b.ttf",
     "static/media/Poppins-Medium.ttf": "/marvelous-adventures/static/media/Poppins-Medium.948fb9dbf93582f2bbd1.ttf",
     "static/media/SFProText-Regular.woff": "/marvelous-adventures/static/media/SFProText-Regular.87d722f246f41640c8de.woff",
     "static/media/GTAmerica-Medium.ttf": "/marvelous-adventures/static/media/GTAmerica-Medium.0ddf24f107282266a55e.ttf",
+    "static/media/spider-m-2.jpg": "/marvelous-adventures/static/media/spider-m-2.b350fe87b0ed11bb2362.jpg",
+    "static/media/hulk-1.jpg": "/marvelous-adventures/static/media/hulk-1.3d1b498dd19ca6f4e9bb.jpg",
+    "static/media/hulk-m-2.jpg": "/marvelous-adventures/static/media/hulk-m-2.1a0d32aae101eb9d71b6.jpg",
     "static/media/black-m-2.jpg": "/marvelous-adventures/static/media/black-m-2.9468f206b9afafb99820.jpg",
     "static/media/SFProText-Regular.woff2": "/marvelous-adventures/static/media/SFProText-Regular.ebbb25d0408384a6398c.woff2",
     "static/media/Poppins-Regular.woff": "/marvelous-adventures/static/media/Poppins-Regular.4726ff7ff16fa523a0c8.woff",
@@ -22,19 +30,15 @@
     "static/media/NeueMontreal-Medium.woff": "/marvelous-adventures/static/media/NeueMontreal-Medium.7cb2840cea8f36df2a82.woff",
     "static/media/HelveticaNeueCyr-Roman.ttf": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.30833b98483699c9d3a8.ttf",
     "static/media/NeueMontreal-Medium.woff2": "/marvelous-adventures/static/media/NeueMontreal-Medium.f7260c49d75c006801c1.woff2",
-    "static/media/sprite.svg": "/marvelous-adventures/static/media/sprite.fbf013c0b99cad2b4c1050577090ac7b.svg",
+    "static/media/sprite.svg": "/marvelous-adventures/static/media/sprite.c9ab3a435871b94b141ed477f178a9c6.svg",
     "static/media/HelveticaNeueCyr-Roman.woff": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.d5ae05d4ba6fb85421b0.woff",
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
-    "static/media/notification.svg?s3g3t9": "/marvelous-adventures/static/media/notification.5d0158671dd860c714c4.svg",
-    "static/media/notification.eot": "/marvelous-adventures/static/media/notification.3657084dc0419605a91c.eot",
-    "static/media/notification.woff?s3g3t9": "/marvelous-adventures/static/media/notification.c392cd33d9d9de730f9d.woff",
-    "static/media/notification.ttf?s3g3t9": "/marvelous-adventures/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/marvelous-adventures/index.html",
-    "main.cef54e02.css.map": "/marvelous-adventures/static/css/main.cef54e02.css.map",
-    "main.cde67147.js.map": "/marvelous-adventures/static/js/main.cde67147.js.map"
+    "main.92a37d29.css.map": "/marvelous-adventures/static/css/main.92a37d29.css.map",
+    "main.87fc69d1.js.map": "/marvelous-adventures/static/js/main.87fc69d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.cef54e02.css",
-    "static/js/main.cde67147.js"
+    "static/css/main.92a37d29.css",
+    "static/js/main.87fc69d1.js"
   ]
 }
