@@ -2,10 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  max-width: 480px;
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+
+  @media screen and (min-width: 375px) {
+    width: 375px;
+  }
 
   @media screen and (min-width: 768px) {
     min-width: 768px;
