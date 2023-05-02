@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Black Panther",
+    "colors": {
+      "main": "#34387F",
+      "gradientBg": "linear-gradient(180deg, #34387F 36.46%, rgba(52, 56, 127, 0) 100%)",
+      "gradientBtn": "radial-gradient(81.15% 81.15% at 50% 18.85%, #34387F 0%, #171717 100%)"
+    },
+    "description": "T’Challa is the king of the secretive and highly advanced African nation of Wakanda - as well as the powerful warrior known as the Black Panther."
+  },
+  {
+    "name": "Spider man",
+    "colors": {
+      "main": "#600404",
+      "gradientBg": "linear-gradient(180deg, #600404 36.46%, rgba(52, 56, 127, 0) 100%)",
+      "gradientBtn": "radial-gradient(81.15% 81.15% at 50% 18.85%, #600404 0%, #171717 100%)"
+    },
+    "description": "With amazing spider-like abilities, teenage science whiz Peter Parker fights crime and dreams of becoming an Avenger as Spider-Man."
+  },
+  {
+    "name": "Hulk",
+    "colors": {
+      "main": "#5B7F3C",
+      "gradientBg": "linear-gradient(180deg, #5B7F3C 36.46%, rgba(52, 56, 127, 0) 100%)",
+      "gradientBtn": "radial-gradient(81.15% 81.15% at 50% 18.85%, #5B7F3C 0%, #171717 100%)"
+    },
+    "description": "Exposed to heavy doses of gamma radiation, scientist Bruce Banner transforms into the mean, green rage machine called the Hulk."
+  }
+]
