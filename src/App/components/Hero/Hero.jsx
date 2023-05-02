@@ -19,7 +19,6 @@ export const Hero = () => {
     <HeroSection padding={"92px 0 80px"} bgc={"#0C0B0B"}>
       <Container>
         <SliderList>
-          <HeroItem panther />
           {heros && heros.map((hero) => <HeroItem {...hero} />)}
         </SliderList>
       </Container>

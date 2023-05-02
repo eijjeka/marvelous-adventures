@@ -61,9 +61,9 @@ export const HeroSection = styled(Section)`
     color: var(--secondary-text-color);
 
     @media ${(props) => props.theme.media.tablet} {
+      width: 195px;
     }
     @media ${(props) => props.theme.media.desktop} {
-      width: 195px;
     }
   }
 `;
@@ -181,34 +181,11 @@ export const StyledHeroButton = styled.button`
     height: 144px;
     top: 380px;
   }
-
-  ${(props) =>
-    props.panther &&
-    css`
-      background-image: ${(props) => props.theme.panther.buttonGradient};
-      &:hover,
-      &:focus {
-        box-shadow: 0 0 15px 5px ${(props) => props.theme.panther.color};
-      }
-    `}
-  ${(props) =>
-    props.spider &&
-    css`
-      background-image: ${(props) => props.theme.spider.buttonGradient};
-      &:hover,
-      &:focus {
-        box-shadow: 0 0 15px 5px ${(props) => props.theme.spider.color};
-      }
-    `}
-  ${(props) =>
-    props.hulk &&
-    css`
-      background-image: ${(props) => props.theme.hulk.buttonGradient};
-      &:hover,
-      &:focus {
-        box-shadow: 0 0 15px 5px ${(props) => props.theme.hulk.color};
-      }
-    `}
+  background-image: ${(colors) => colors.gradientBtn};
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 15px 5px ${(colors) => colors.main};
+  }
 `;
 
 export const StyledGradientBg = styled.div`
@@ -224,37 +201,20 @@ export const StyledGradientBg = styled.div`
     height: 300px;
     bottom: 0;
   }
-  ${(props) =>
-    props.panther &&
-    css`
-      background-image: ${(props) => props.theme.panther.bgGradient};
-    `}
-  ${(props) =>
-    props.spider &&
-    css`
-      background-image: ${(props) => props.theme.spider.bgGradient};
-    `}
-  ${(props) =>
-    props.hulk &&
-    css`
-      background-image: ${(props) => props.theme.hulk.bgGradient};
-    `}
+  background-image: ${({ colorBg }) => colorBg};
 `;
 
 export const ColorButton = styled(Button)`
-  ${(props) =>
-    props.panther &&
-    css`
-      background-color: ${(props) => props.theme.panther.color};
-    `}
-  ${(props) =>
-    props.spider &&
-    css`
-      background-color: ${(props) => props.theme.spider.color};
-    `}
-  ${(props) =>
-    props.hulk &&
-    css`
-      background-color: ${(props) => props.theme.hulk.color};
-    `}
+  background-color: ${({ colorBg }) => colorBg};
+  transition-property: transform, color, background-color, border, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+  &:hover,
+  &:focus {
+    color: ${({ colorBg }) => colorBg};
+    background-color: transparent;
+    border: 1px solid ${({ colorBg }) => colorBg};
+    box-shadow: 0 0 10px inset;
+    transform: scale(1.03);
+  }
 `;

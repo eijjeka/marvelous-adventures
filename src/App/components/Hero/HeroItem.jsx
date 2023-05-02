@@ -19,7 +19,7 @@ import styled from "styled-components";
 
 const Item = styled.li``;
 
-export const HeroItem = (props) => {
+export const HeroItem = ({ name, colors, description }) => {
   return (
     <Item>
       <WrapForMainContent>
@@ -33,10 +33,15 @@ export const HeroItem = (props) => {
           today.
         </p>
         <StyledWrapperBtn>
-          <ColorButton {...props} mr={"8px"}>
+          <ColorButton colorBg={colors.main} mr={"8px"}>
             Characters
           </ColorButton>
-          <Button border={"1px solid rgba(250, 250, 250, 0.5);"}>Comics</Button>
+          <Button
+            colorBg={colors.main}
+            border={"1px solid rgba(250, 250, 250, 0.5);"}
+          >
+            Comics
+          </Button>
         </StyledWrapperBtn>
       </WrapForMainContent>
       <WrapperImages dis={"flex"} fldir={"column"}>
@@ -55,18 +60,14 @@ export const HeroItem = (props) => {
             width={237}
             height={343}
           />
-          <HeroButton {...props} />
+          <HeroButton colors={colors}>{name}</HeroButton>
           <span></span>
           <DescriptionWrapper>
             <h2>Characters</h2>
-            <p class="description-hero">
-              T’Challa is the king of the secretive and highly advanced African
-              nation of Wakanda - as well as the powerful warrior known as the
-              Black Panther.
-            </p>
+            <p class="description-hero">{description}</p>
           </DescriptionWrapper>
         </StyledWrapperImg>
-        <StyledGradientBg {...props} />
+        <StyledGradientBg colorBg={colors.gradientBg} />
       </WrapperImages>
     </Item>
   );
