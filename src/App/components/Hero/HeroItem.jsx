@@ -19,11 +19,11 @@ import styled from "styled-components";
 
 const Item = styled.li``;
 
-export const HeroItem = ({ name, colors, description }) => {
+export const HeroItem = ({ name, imgName, colors, description }) => {
   return (
     <Item>
       <WrapForMainContent>
-        <SubTitle class="subtitle">Web-based platform</SubTitle>
+        <SubTitle>Web-based platform</SubTitle>
         <MainTitle>Marvelous Adventures</MainTitle>
         <p class="hero-text">
           is a web-based platform that provides an immersive experience for
@@ -46,16 +46,14 @@ export const HeroItem = ({ name, colors, description }) => {
       </WrapForMainContent>
       <WrapperImages dis={"flex"} fldir={"column"}>
         <StyledImage
-          srcSet={`${getPathImg.panther1} 1x, ${getPathImg.panther1_2x} 2x`}
-          src={getPathImg.panther1}
+          src={getPathImg(`${imgName}-1`)}
           alt="hero panther"
           width={237}
           height={343}
         />
         <StyledWrapperImg>
           <StyledImage
-            srcSet={`${getPathImg.panther2} 1x, ${getPathImg.panther2_2x} 2x`}
-            src={getPathImg.panther2}
+            src={getPathImg(`${imgName}-2`)}
             alt="hero black"
             width={237}
             height={343}
