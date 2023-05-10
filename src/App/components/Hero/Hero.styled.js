@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Section } from "../../shared/Section/Section";
 import { Button } from "App/shared/Button/Button";
 
