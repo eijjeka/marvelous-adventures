@@ -16,8 +16,18 @@ export const StyledButton = styled.button`
   border: ${({ border }) => border || "1px solid transparent"};
   border-radius: ${({ br }) => br || "1000px"};
   cursor: pointer;
+  transition-property: transform, box-shadow, color;
+  transition-duration: 300ms, 500ms, 500ms;
+  transition-timing-function: linear;
+
   @media ${(props) => props.theme.media.tablet} {
     font-size: 18px;
     line-height: 1.6;
+  }
+  &:hover,
+  &:focus {
+    color: black;
+    box-shadow: 0 0 100px white inset;
+    transform: scale(1.06);
   }
 `;

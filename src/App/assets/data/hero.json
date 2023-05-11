@@ -1,6 +1,7 @@
 [
   {
     "name": "Black Panther",
+    "imgName": "panther",
     "colors": {
       "main": "#34387F",
       "gradientBg": "linear-gradient(180deg, #34387F 36.46%, rgba(52, 56, 127, 0) 100%)",
@@ -10,6 +11,7 @@
   },
   {
     "name": "Spider man",
+    "imgName": "spider",
     "colors": {
       "main": "#600404",
       "gradientBg": "linear-gradient(180deg, #600404 36.46%, rgba(52, 56, 127, 0) 100%)",
@@ -19,6 +21,7 @@
   },
   {
     "name": "Hulk",
+    "imgName": "hulk",
     "colors": {
       "main": "#5B7F3C",
       "gradientBg": "linear-gradient(180deg, #5B7F3C 36.46%, rgba(52, 56, 127, 0) 100%)",

@@ -3,6 +3,7 @@ import { HeroSection } from "App/components/Hero/Hero.styled";
 import { HeroItem } from "./HeroItem";
 import styled from "styled-components";
 import heros from "App/assets/data/hero.json";
+import { PaginationHeroPage } from "./PaginationHeroPage";
 console.log("heros: ", heros);
 
 const SliderList = styled.ul`
@@ -10,18 +11,13 @@ const SliderList = styled.ul`
 `;
 
 export const Hero = () => {
-  const aria = "true";
-
-  const result = aria === "true";
-  console.log("result: ", result);
-
   return (
     <HeroSection padding={"92px 0 80px"} bgc={"#0C0B0B"}>
       <Container>
         <SliderList>
-          <HeroItem panther />
           {heros && heros.map((hero) => <HeroItem {...hero} />)}
         </SliderList>
+        <PaginationHeroPage heros={heros} />
       </Container>
     </HeroSection>
   );
