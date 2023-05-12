@@ -15,7 +15,8 @@ export const RandomCharacters = () => {
           el.thumbnail.path.indexOf("image_not_available") === -1 &&
           el.description !== ""
       );
-      setCharacters(items.slice(0, 5));
+      const arr = items.slice(0, 5);
+      setCharacters(arr);
     });
   }, []);
 
@@ -28,19 +29,3 @@ export const RandomCharacters = () => {
     </Section>
   );
 };
-
-// useEffect(() => {
-//   for (let i = 0; i < items.length; i++) {
-//     const { description, thumbnail } = items[i];
-
-//     if (characters.length === 5) {
-//       console.log("yes");
-//       break;
-//     } else if (
-//       thumbnail.path.indexOf("image_not_available") === -1 &&
-//       description !== ""
-//     ) {
-//       setCharacters((prevState) => [...prevState, items[i]]);
-//     }
-//   }
-// }, [items]);

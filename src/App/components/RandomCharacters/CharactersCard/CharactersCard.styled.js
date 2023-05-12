@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.li`
-  margin-bottom: 32px;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  cursor: pointer;
+
+  :not(:last-child) {
+    margin-bottom: 32px;
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -25,6 +29,7 @@ export const CardTitle = styled.h3`
 
 export const CardText = styled.p`
   margin-bottom: 32px;
+
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
@@ -37,5 +42,8 @@ export const CardText = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 1.12;
+  }
+
+  @media screen and (min-width: 1440px) {
   }
 `;

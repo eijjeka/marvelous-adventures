@@ -1,11 +1,15 @@
-import { Wrapper } from "./CharactersList.styled";
+import { useState, useEffect } from "react";
+
+import { Wrapper, InnerWrapper } from "./CharactersList.styled";
 import { CharactersCard } from "../CharactersCard";
-import { useState } from "react";
+import { DetailsCharacter } from "App/components/DetailsCharacter";
+import { Modal } from "App/components/Modal";
+
 import { CardImg } from "./CharactersList.styled";
-import { useEffect } from "react";
 
 export const CharactersList = ({ data }) => {
   const [activeCard, setActiveCard] = useState(data[0]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,21 +24,31 @@ export const CharactersList = ({ data }) => {
     return () => clearInterval(interval);
   }, [data]);
 
+  const handleClickCard = (data) => {
+    setActiveCard(data);
+    setIsOpen(true);
+  };
+
   return (
-    <>
+    <Wrapper>
       <CardImg
         src={`${activeCard.thumbnail.path}.${activeCard.thumbnail.extension}`}
       />
-      <Wrapper>
+      <InnerWrapper>
         {data.map((el) => (
           <CharactersCard
             active={activeCard}
             key={el.id}
             item={el}
-            handleClick={setActiveCard}
+            handleClick={handleClickCard}
           />
         ))}
-      </Wrapper>
-    </>
+      </InnerWrapper>
+      {isOpen && (
+        <Modal setActive={setIsOpen}>
+          <DetailsCharacter id={activeCard.id} onClose={setIsOpen} />
+        </Modal>
+      )}
+    </Wrapper>
   );
 };
