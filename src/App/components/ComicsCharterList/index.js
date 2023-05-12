@@ -1,0 +1,1 @@
+export { ComicsCharterList } from "./ComicsCharterList";
