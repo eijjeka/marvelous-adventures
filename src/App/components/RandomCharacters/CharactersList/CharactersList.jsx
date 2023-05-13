@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
-import { Wrapper, InnerWrapper } from "./CharactersList.styled";
+import {
+  Wrapper,
+  InnerWrapper,
+  CardImgContainer,
+} from "./CharactersList.styled";
 import { CharactersCard } from "../CharactersCard";
 import { DetailsCharacter } from "App/components/DetailsCharacter";
 import { Modal } from "App/components/Modal";
@@ -31,9 +35,11 @@ export const CharactersList = ({ data }) => {
 
   return (
     <Wrapper>
-      <CardImg
-        src={`${activeCard.thumbnail.path}.${activeCard.thumbnail.extension}`}
-      />
+      <CardImgContainer>
+        <CardImg
+          src={`${activeCard.thumbnail.path}.${activeCard.thumbnail.extension}`}
+        />
+      </CardImgContainer>
       <InnerWrapper>
         {data.map((el) => (
           <CharactersCard
