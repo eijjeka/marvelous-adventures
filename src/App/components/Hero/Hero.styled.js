@@ -12,6 +12,10 @@ export const HeroSection = styled(Section)`
   }
 
   & > div {
+    @media (max-width: 767px) {
+      min-height: 1200.34px;
+    }
+
     @media ${(props) => props.theme.media.desktop} {
       display: flex;
     }
@@ -53,6 +57,7 @@ export const HeroSection = styled(Section)`
 
   .description-hero {
     width: 125px;
+    min-height: 84px;
     margin-bottom: 0;
     font-family: "Helvetica Neue";
     font-size: 12px;
