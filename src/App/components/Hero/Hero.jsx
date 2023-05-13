@@ -12,16 +12,16 @@ export const Hero = () => {
   useEffect(() => {
     const timerPagination = setInterval(() => {
       setCurrentHero((prevHero) => {
-        const activeIndex = heros.findIndex(
+        const currentIndex = heros.findIndex(
           (hero) => hero.name === prevHero.name
         );
 
-        if (activeIndex === heros.length - 1) {
+        if (currentIndex === heros.length - 1) {
           setCurrentHero(heros[0]);
           return;
         }
 
-        const nextIndex = activeIndex + 1;
+        const nextIndex = currentIndex + 1;
         return heros[nextIndex];
       });
     }, 3500);

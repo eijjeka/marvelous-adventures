@@ -21,7 +21,12 @@ export const CharactersList = ({ data }) => {
         const activeIndex = data.findIndex(
           (card) => card.id === prevActiveCard.id
         );
-        const nextIndex = (activeIndex + 1) % data.length;
+
+        if (activeIndex === data.length - 1) {
+          setActiveCard(data[0]);
+          return;
+        }
+        const nextIndex = activeIndex + 1;
         return data[nextIndex];
       });
     }, 3500);
