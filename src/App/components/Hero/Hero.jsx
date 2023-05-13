@@ -1,9 +1,7 @@
 import { Container } from "App/shared/Container/Container";
 import { HeroSection } from "App/components/Hero/Hero.styled";
 import { HeroItem } from "./HeroItem";
-import styled from "styled-components";
 import heros from "App/assets/data/hero.json";
-import { PaginationHeroPage } from "./PaginationHeroPage";
 import { useEffect, useState } from "react";
 console.log("heros: ", heros);
 
@@ -14,7 +12,6 @@ export const Hero = () => {
   useEffect(() => {
     const timerPagination = setInterval(() => {
       setCurrentHero((prevHero) => {
-        // console.log("prevHero: ", prevHero);
         const activeIndex = heros.findIndex(
           (hero) => hero.name === prevHero.name
         );
@@ -33,7 +30,7 @@ export const Hero = () => {
       console.log("UNMOUNT");
       clearInterval(timerPagination);
     };
-  }, [heros]);
+  }, []);
 
   return (
     <HeroSection padding={"92px 0 80px"} bgc={"#0C0B0B"}>
