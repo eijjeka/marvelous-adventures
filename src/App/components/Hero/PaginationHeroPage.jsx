@@ -3,19 +3,19 @@ import heros from "App/assets/data/hero.json";
 
 const PaginationList = styled.ul`
   position: absolute;
-  top: 400px;
+  bottom: 524px;
   right: 351px;
   display: flex;
   gap: 14px;
   flex-direction: column;
   align-items: center;
   list-style: none;
+
   @media ${(props) => props.theme.media.tablet} {
-    width: 100px;
     flex-direction: row;
     bottom: -41px;
     right: 50%;
-    transform: translateX(-50%);
+    transform: translateX(50%);
   }
   @media ${(props) => props.theme.media.desktop} {
     flex-direction: column;
