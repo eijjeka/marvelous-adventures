@@ -12,26 +12,34 @@ export const getRandomCharacters = async () => {
   const offset = Math.floor(Math.random() * 1460);
   try {
     const response = await axios.get(
-      `characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offset}&limit=50&orderBy=modified`
+      `characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offset}&limit=100&orderBy=modified&modifiedSince=2013-01-22`
     );
     return response.data.data.results;
   } catch (error) {
     console.log(error);
   }
+};
 
-  // const randomHeroes = [];
+export const getCharacterById = async (id) => {
+  try {
+    const response = await axios.get(
+      `characters/${id}?ts=${ts}&apikey=${publicKey}&hash=${hash}`
+    );
+    console.log(response.data.data.results);
+    return response.data.data.results;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-  // for (let i = 0; i < characters.length; i++) {
-  //   const { description, thumbnail } = characters[i];
-
-  //   if (randomHeroes.length === 5) {
-  //     return randomHeroes;
-  //   } else if (
-  //     thumbnail.path.indexOf("image_not_available") === -1 &&
-  //     description !== ""
-  //   ) {
-  //     randomHeroes.push(characters[i]);
-  //   }
-  // }
-  // return randomHeroes;
+export const getCharterComicsById = async (id) => {
+  try {
+    const response = await axios.get(
+      `characters/${id}/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=3`
+    );
+    console.log(response.data.data.results);
+    return response.data.data.results;
+  } catch (error) {
+    console.log(error);
+  }
 };
