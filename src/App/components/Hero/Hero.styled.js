@@ -108,11 +108,15 @@ export const StyledWrapperBtn = styled.div`
 export const WrapperImages = styled.div`
   display: flex;
   flex-direction: column;
+  padding-left: 18px;
+
   @media ${(props) => props.theme.media.tablet} {
     flex-direction: row;
     align-items: flex-end;
     gap: 32px;
+    padding-left: 0;
   }
+
   @media ${(props) => props.theme.media.desktop} {
     position: absolute;
     right: 0;
@@ -123,6 +127,8 @@ export const WrapperImages = styled.div`
 export const StyledImage = styled.img`
   width: 237px;
   height: 343px;
+  border-radius: 4px;
+
   @media ${(props) => props.theme.media.tablet} {
     width: 336px;
     height: 540px;
@@ -147,14 +153,15 @@ export const StyledWrapperImg = styled.div`
   position: relative;
   z-index: 2;
   align-self: flex-end;
-  width: 237px;
+  /* width: 237px; */
   margin-top: 20px;
   @media ${(props) => props.theme.media.tablet} {
-    width: 336px;
+    /* width: 336px; */
     margin-top: 0;
   }
   @media ${(props) => props.theme.media.desktop} {
     padding-bottom: 96px;
+    /* width: 352px; */
   }
 `;
 
@@ -190,6 +197,7 @@ export const StyledHeroButton = styled.button`
 
 export const StyledGradientBg = styled.div`
   position: absolute;
+  z-index: -1;
   right: 0;
   bottom: 40px;
   width: 260px;

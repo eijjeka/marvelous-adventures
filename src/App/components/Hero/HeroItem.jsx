@@ -16,8 +16,9 @@ import {
 
 import getPathImg from "App/services/getPathImg";
 import styled from "styled-components";
+import { PaginationHeroPage } from "./PaginationHeroPage";
 
-const Item = styled.li``;
+const Item = styled.div``;
 
 export const HeroItem = ({ name, imgName, colors, description }) => {
   return (
@@ -44,6 +45,7 @@ export const HeroItem = ({ name, imgName, colors, description }) => {
           </Button>
         </StyledWrapperBtn>
       </WrapForMainContent>
+      <PaginationHeroPage name={name} />
       <WrapperImages dis={"flex"} fldir={"column"}>
         <StyledImage
           src={getPathImg(`${imgName}-1`)}
@@ -64,8 +66,8 @@ export const HeroItem = ({ name, imgName, colors, description }) => {
             <h2>Characters</h2>
             <p class="description-hero">{description}</p>
           </DescriptionWrapper>
+          <StyledGradientBg colorBg={colors.gradientBg} />
         </StyledWrapperImg>
-        <StyledGradientBg colorBg={colors.gradientBg} />
       </WrapperImages>
     </Item>
   );
