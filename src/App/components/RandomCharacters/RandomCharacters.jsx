@@ -9,15 +9,22 @@ export const RandomCharacters = () => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    marvelAPI.getRandomCharacters().then((data) => {
-      const items = data.filter(
-        (el) =>
-          el.thumbnail.path.indexOf("image_not_available") === -1 &&
-          el.description !== ""
-      );
-      const arr = items.slice(0, 5);
-      setCharacters(arr);
-    });
+    try {
+      marvelAPI.getRandomCharacters().then((data) => {
+        console.log("data: ", data);
+        const items = data.filter(
+          (el) =>
+            el.thumbnail.path.indexOf("image_not_available") === -1 &&
+            el.description !== ""
+        );
+
+        console.log("items: ", items);
+        const arr = items.slice(0, 5);
+        setCharacters(arr);
+      });
+    } catch (error) {
+      console.log("error: ", error);
+    }
   }, []);
 
   return (

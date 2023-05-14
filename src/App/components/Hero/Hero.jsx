@@ -12,16 +12,11 @@ export const Hero = () => {
   useEffect(() => {
     const timerPagination = setInterval(() => {
       setCurrentHero((prevHero) => {
-        const activeIndex = heros.findIndex(
+        const currentIndex = heros.findIndex(
           (hero) => hero.name === prevHero.name
         );
 
-        if (activeIndex === heros.length - 1) {
-          setCurrentHero(heros[0]);
-          return;
-        }
-
-        const nextIndex = activeIndex + 1;
+        const nextIndex = (currentIndex + 1) % heros.length;
         return heros[nextIndex];
       });
     }, 3500);
@@ -34,9 +29,7 @@ export const Hero = () => {
 
   return (
     <HeroSection padding={"92px 0 80px"} bgc={"#0C0B0B"}>
-      <Container>
-        <HeroItem {...currentHero} />
-      </Container>
+      <Container>{currentHero && <HeroItem {...currentHero} />}</Container>
     </HeroSection>
   );
 };

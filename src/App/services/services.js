@@ -8,13 +8,24 @@ const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const ts = new Date().getTime();
 const hash = md5(ts + privateKey + publicKey);
 
-export const getRandomCharacters = async () => {
+const getChart = async () => {
   const offset = Math.floor(Math.random() * 1460);
+  const response = await axios.get(
+    `characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offset}&limit=100&orderBy=modified&modifiedSince=2013-01-22`
+  );
+  return response.data.data.results;
+};
+
+export const getRandomCharacters = async () => {
   try {
-    const response = await axios.get(
-      `characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offset}&limit=100&orderBy=modified&modifiedSince=2013-01-22`
-    );
-    return response.data.data.results;
+    const data = await getChart();
+    console.log("getChart: ", data.length);
+
+    if (data.length === 0) {
+      const charters = await getChart();
+      return charters;
+    }
+    return data;
   } catch (error) {
     console.log(error);
   }

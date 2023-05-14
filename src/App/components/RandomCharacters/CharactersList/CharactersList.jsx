@@ -15,16 +15,32 @@ export const CharactersList = ({ data }) => {
   const [activeCard, setActiveCard] = useState(data[0]);
   const [isOpen, setIsOpen] = useState(false);
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveCard((prevActiveCard) => {
+  //       const activeIndex = data.findIndex(
+  //         (card) => card.id === prevActiveCard.id
+  //       );
+
+  //       const nextIndex = (activeIndex + 1) % data.length;
+  //       return data[nextIndex];
+  //     });
+  //   }, 3500);
+  //   return () => clearInterval(interval);
+  // }, [data]);
+
+  const updateActiveCard = () => {
+    setActiveCard((prevActiveCard) => {
+      const activeIndex = data.findIndex(
+        (card) => card.id === prevActiveCard.id
+      );
+      const nextIndex = (activeIndex + 1) % data.length;
+      return data[nextIndex];
+    });
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveCard((prevActiveCard) => {
-        const activeIndex = data.findIndex(
-          (card) => card.id === prevActiveCard.id
-        );
-        const nextIndex = (activeIndex + 1) % data.length;
-        return data[nextIndex];
-      });
-    }, 3500);
+    const interval = setInterval(updateActiveCard, 3500);
     return () => clearInterval(interval);
   }, [data]);
 
