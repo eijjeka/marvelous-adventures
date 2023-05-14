@@ -16,12 +16,7 @@ export const Hero = () => {
           (hero) => hero.name === prevHero.name
         );
 
-        if (currentIndex === heros.length - 1) {
-          setCurrentHero(heros[0]);
-          return;
-        }
-
-        const nextIndex = currentIndex + 1;
+        const nextIndex = (currentIndex + 1) % heros.length;
         return heros[nextIndex];
       });
     }, 3500);
@@ -34,9 +29,7 @@ export const Hero = () => {
 
   return (
     <HeroSection padding={"92px 0 80px"} bgc={"#0C0B0B"}>
-      <Container>
-        <HeroItem {...currentHero} />
-      </Container>
+      <Container>{currentHero && <HeroItem {...currentHero} />}</Container>
     </HeroSection>
   );
 };
