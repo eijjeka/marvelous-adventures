@@ -14,19 +14,19 @@ export const InnerWrapper = styled.ul`
 `;
 
 export const CardImgContainer = styled.div`
-  max-width: 100%;
-  max-height: 480px;
+  max-width: 335px;
+  height: 335px;
   margin-bottom: 32px;
   border-radius: 8px;
 
-  @media screen and (min-width: 768px) {
-    width: 704px;
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    max-width: 704px;
     height: 704px;
   }
 
   @media screen and (min-width: 1440px) {
     min-width: 496px;
-    min-height: 704px;
+    height: 704px;
     margin-bottom: 0;
     margin-right: 32px;
   }
@@ -37,4 +37,5 @@ export const CardImg = styled.img`
   height: 100%;
   display: block;
   object-fit: cover;
+  border-radius: 8px;
 `;
