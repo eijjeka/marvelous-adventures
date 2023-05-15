@@ -19,3 +19,9 @@ export const Title = styled.h2`
     line-height: 1;
   }
 `;
+
+export const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

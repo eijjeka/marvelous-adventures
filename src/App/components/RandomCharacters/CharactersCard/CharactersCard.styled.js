@@ -13,6 +13,8 @@ export const CardTitle = styled.h3`
   margin: 0;
   margin-bottom: 16px;
 
+  transition: color 250ms linear;
+
   font-family: "Poppins";
   font-weight: 500;
   font-size: 18px;
@@ -35,6 +37,7 @@ export const CardText = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
+  transition: color 250ms linear;
 
   color: ${({ active, id }) =>
     active.id === id ? "#4B50AD" : "rgba(250, 250, 250, 0.5)"};

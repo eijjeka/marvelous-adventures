@@ -7,27 +7,12 @@ import {
 } from "./CharactersList.styled";
 import { CharactersCard } from "../CharactersCard";
 import { DetailsCharacter } from "App/components/DetailsCharacter";
-import { Modal } from "App/components/Modal";
 
 import { CardImg } from "./CharactersList.styled";
 
 export const CharactersList = ({ data }) => {
   const [activeCard, setActiveCard] = useState(data[0]);
   const [isOpen, setIsOpen] = useState(false);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveCard((prevActiveCard) => {
-  //       const activeIndex = data.findIndex(
-  //         (card) => card.id === prevActiveCard.id
-  //       );
-
-  //       const nextIndex = (activeIndex + 1) % data.length;
-  //       return data[nextIndex];
-  //     });
-  //   }, 3500);
-  //   return () => clearInterval(interval);
-  // }, [data]);
 
   const updateActiveCard = () => {
     setActiveCard((prevActiveCard) => {
@@ -42,6 +27,7 @@ export const CharactersList = ({ data }) => {
   useEffect(() => {
     const interval = setInterval(updateActiveCard, 3500);
     return () => clearInterval(interval);
+    // eslint-disable-next-line
   }, [data]);
 
   const handleClickCard = (data) => {
@@ -66,11 +52,7 @@ export const CharactersList = ({ data }) => {
           />
         ))}
       </InnerWrapper>
-      {isOpen && (
-        <Modal setActive={setIsOpen}>
-          <DetailsCharacter id={activeCard.id} onClose={setIsOpen} />
-        </Modal>
-      )}
+      {isOpen && <DetailsCharacter id={activeCard.id} setActive={setIsOpen} />}
     </Wrapper>
   );
 };

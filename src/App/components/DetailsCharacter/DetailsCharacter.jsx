@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as marvelAPI from "App/services/services.js";
 import moment from "moment";
+
 import {
   Svg,
   Meta,
@@ -14,8 +15,9 @@ import {
 
 import icon from "App/assets/images/sprite.svg";
 import { ComicsCharterList } from "../ComicsCharterList";
+import { Modal } from "App/components/Modal";
 
-export const DetailsCharacter = ({ onClose, id }) => {
+export const DetailsCharacter = ({ setActive, id }) => {
   const [character, setCharacter] = useState("");
 
   useEffect(() => {
@@ -26,8 +28,8 @@ export const DetailsCharacter = ({ onClose, id }) => {
   return (
     <>
       {character && (
-        <>
-          <CloseBtn onClick={() => onClose(false)}>
+        <Modal setActive={setActive}>
+          <CloseBtn onClick={() => setActive(false)}>
             <Svg>
               <use href={icon + "#icon-close"} />
             </Svg>
@@ -43,7 +45,7 @@ export const DetailsCharacter = ({ onClose, id }) => {
               <ComicsCharterList id={id} />
             </Meta>
           </Wrapper>
-        </>
+        </Modal>
       )}
     </>
   );
