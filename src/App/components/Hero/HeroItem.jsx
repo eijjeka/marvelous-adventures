@@ -38,6 +38,7 @@ export const HeroItem = ({ name, imgName, colors, description }) => {
             Characters
           </ColorButton>
           <Button
+            to={"/comics"}
             colorBg={colors.main}
             border={"1px solid rgba(250, 250, 250, 0.5);"}
           >
