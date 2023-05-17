@@ -1,6 +1,41 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
+  position: relative;
+  padding: 40px 20px;
+`;
+
+export const CloseBtn = styled.button`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  @media screen and (min-width: 768px) {
+    top: 5px;
+    right: 13px;
+    width: 28px;
+    height: 28px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 0px;
+    right: 12px;
+  }
+`;
+
+export const Svg = styled.svg`
+  width: 100%;
+  height: 100%;
+`;
+
+export const WrapperCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,33 +46,30 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const CloseBtn = styled.button`
-  width: 20px;
-  height: 20px;
+export const CardImgContainer = styled.div`
+  margin-bottom: 24px;
 
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: transparent;
-`;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    max-width: 480px;
+  }
 
-export const Svg = styled.svg`
-  width: 100%;
-  height: 100%;
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    width: 536px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+    width: 442px;
+    margin-right: 32px;
+  }
 `;
 
 export const CardImg = styled.img`
   width: 100%;
-  margin-bottom: 16px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
   border-radius: 8px;
-
-  @media screen and (min-width: 768px) {
-    max-width: 480px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    margin-right: 16px;
-  }
 `;
 
 export const Meta = styled.div`
@@ -45,11 +77,19 @@ export const Meta = styled.div`
   background: #181818;
   border-radius: 8px;
 
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    max-width: 480px;
+  }
+
   @media screen and (min-width: 768px) {
+    width: 536px;
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 588px;
   }
 `;
 
@@ -82,7 +122,6 @@ export const Date = styled.p`
 `;
 
 export const Description = styled.p`
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.28;
   color: #fafafa;
