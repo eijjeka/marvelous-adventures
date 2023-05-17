@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/marvelous-adventures/static/css/main.92a37d29.css",
-    "main.js": "/marvelous-adventures/static/js/main.074b5a98.js",
-    "layout.js": "/marvelous-adventures/static/js/layout.2499dcb2.chunk.js",
+    "main.js": "/marvelous-adventures/static/js/main.aa16a605.js",
+    "layout.js": "/marvelous-adventures/static/js/layout.58da90cc.chunk.js",
     "static/js/49.394094d2.chunk.js": "/marvelous-adventures/static/js/49.394094d2.chunk.js",
     "static/media/spider-bg@2x.jpg": "/marvelous-adventures/static/media/spider-bg@2x.0a6741b5c273c402530d.jpg",
     "static/media/comics-bg@2x.jpg": "/marvelous-adventures/static/media/comics-bg@2x.c4204304acd810e4f811.jpg",
@@ -49,12 +49,12 @@
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
     "main.92a37d29.css.map": "/marvelous-adventures/static/css/main.92a37d29.css.map",
-    "main.074b5a98.js.map": "/marvelous-adventures/static/js/main.074b5a98.js.map",
-    "layout.2499dcb2.chunk.js.map": "/marvelous-adventures/static/js/layout.2499dcb2.chunk.js.map",
+    "main.aa16a605.js.map": "/marvelous-adventures/static/js/main.aa16a605.js.map",
+    "layout.58da90cc.chunk.js.map": "/marvelous-adventures/static/js/layout.58da90cc.chunk.js.map",
     "49.394094d2.chunk.js.map": "/marvelous-adventures/static/js/49.394094d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92a37d29.css",
-    "static/js/main.074b5a98.js"
+    "static/js/main.aa16a605.js"
   ]
 }
