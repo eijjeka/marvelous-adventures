@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import * as marvelAPI from "App/services/services.js";
 
-import { Title, List, Image, ItemTitle } from "./ComicsCharterList.styled";
+import {
+  Title,
+  List,
+  Image,
+  ItemTitle,
+  TitleWriter,
+  ImageWrapper,
+} from "./ComicsCharterList.styled";
 
 export const ComicsCharterList = ({ id }) => {
   const [comics, setComics] = useState([]);
@@ -10,6 +17,8 @@ export const ComicsCharterList = ({ id }) => {
     marvelAPI.getCharterComicsById(id).then(setComics);
     // eslint-disable-next-line
   }, []);
+
+  console.log(comics);
 
   return (
     <>
@@ -23,7 +32,7 @@ export const ComicsCharterList = ({ id }) => {
                 alt=""
               />
               <ItemTitle>{el.title}</ItemTitle>
-              {/* <p></p> */}
+              <TitleWriter>{el.creators.items[0].name || ""}</TitleWriter>
             </li>
           ))}
         </List>

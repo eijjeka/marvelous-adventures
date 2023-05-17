@@ -3,14 +3,16 @@ import * as marvelAPI from "App/services/services.js";
 import moment from "moment";
 
 import {
+  Container,
   Svg,
   Meta,
   Title,
   CloseBtn,
   Date,
+  CardImgContainer,
   CardImg,
   Description,
-  Wrapper,
+  WrapperCard,
 } from "./DetailsCharacter.styled";
 
 import icon from "App/assets/images/sprite.svg";
@@ -29,22 +31,26 @@ export const DetailsCharacter = ({ setActive, id }) => {
     <>
       {character && (
         <Modal setActive={setActive}>
-          <CloseBtn onClick={() => setActive(false)}>
-            <Svg>
-              <use href={icon + "#icon-close"} />
-            </Svg>
-          </CloseBtn>
-          <Wrapper>
-            <CardImg
-              src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-            />
-            <Meta>
-              <Title>{character.name}</Title>
-              <Date>{moment(character.modified).format("MMMM D, YYYY")}</Date>
-              <Description>{character.description}</Description>
-              <ComicsCharterList id={id} />
-            </Meta>
-          </Wrapper>
+          <Container>
+            <CloseBtn onClick={() => setActive(false)}>
+              <Svg>
+                <use href={icon + "#icon-close"} />
+              </Svg>
+            </CloseBtn>
+            <WrapperCard>
+              <CardImgContainer>
+                <CardImg
+                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                />
+              </CardImgContainer>
+              <Meta>
+                <Title>{character.name}</Title>
+                <Date>{moment(character.modified).format("MMMM D, YYYY")}</Date>
+                <Description>{character.description}</Description>
+                <ComicsCharterList id={id} />
+              </Meta>
+            </WrapperCard>
+          </Container>
         </Modal>
       )}
     </>
