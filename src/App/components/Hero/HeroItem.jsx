@@ -14,7 +14,7 @@ import {
   WrapperImages,
 } from "./Hero.styled";
 
-import getPathImg from "App/services/getPathImg";
+import getPathImg from "App/services/getPathStaticImg";
 import styled from "styled-components";
 import { PaginationHeroPage } from "./PaginationHeroPage";
 

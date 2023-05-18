@@ -7,15 +7,15 @@ import {
   Author,
 } from "./../../shared/Wrapper/Wrapper";
 
-export const ComicsCard = () => {
+export const ComicsCard = ({ path, name, author }) => {
   return (
     <Wrapper>
       <InnerImage>
-        <Image />
+        <Image src={path} />
       </InnerImage>
       <InnerDescription>
-        <Name />
-        <Author />
+        <Name>{name}</Name>
+        <Author>{author}</Author>
       </InnerDescription>
     </Wrapper>
   );

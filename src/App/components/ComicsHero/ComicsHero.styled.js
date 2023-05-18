@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Section } from "./../../shared/Section/Section";
-import getPathImg from "./../../services/getPathImg";
+import getPathImg from "../../services/getPathStaticImg";
 
 export const ComicsHeroSection = styled(Section)`
   padding-top: 220px;
