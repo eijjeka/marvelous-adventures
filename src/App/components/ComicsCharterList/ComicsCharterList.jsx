@@ -7,7 +7,7 @@ import {
   Image,
   ItemTitle,
   TitleWriter,
-  ImageWrapper,
+  // ImageWrapper,
 } from "./ComicsCharterList.styled";
 
 export const ComicsCharterList = ({ id }) => {
@@ -28,11 +28,15 @@ export const ComicsCharterList = ({ id }) => {
           {comics.map((el) => (
             <li key={el.id}>
               <Image
-                src={`${el.images[0].path}.${el.images[0].extension}`}
+                src={
+                  el.images[0]
+                    ? `${el.images[0].path}.${el.images[0].extension}`
+                    : `${el.thumbnail.path}.${el.thumbnail.extension}`
+                }
                 alt=""
               />
               <ItemTitle>{el.title}</ItemTitle>
-              <TitleWriter>{el.creators.items[0].name || ""}</TitleWriter>
+              <TitleWriter>{el.creators.items[0]?.name}</TitleWriter>
             </li>
           ))}
         </List>

@@ -44,6 +44,7 @@ export const Button = styled.button`
   width: 16px;
   height: 16px;
   margin-right: 8px;
+  cursor: pointer;
 
   background-color: transparent;
   outline: none;

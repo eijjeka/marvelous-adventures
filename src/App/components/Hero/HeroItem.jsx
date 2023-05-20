@@ -26,7 +26,7 @@ export const HeroItem = ({ name, imgName, colors, description }) => {
       <WrapForMainContent>
         <SubTitle>Web-based platform</SubTitle>
         <MainTitle>Marvelous Adventures</MainTitle>
-        <p class="hero-text">
+        <p className="hero-text">
           is a web-based platform that provides an immersive experience for
           users to explore and discover a vast collection of Marvel characters
           and comics. Start exploring the Marvelous Adventures now by visiting
