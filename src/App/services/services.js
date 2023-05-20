@@ -43,3 +43,17 @@ export const getCharterComicsById = async (id) => {
     console.log(error);
   }
 };
+
+export const getCharacterByName = async (name) => {
+  try {
+    if (name) {
+      const response = await axios.get(
+        `characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&nameStartsWith=${name}`
+      );
+      return response.data.data.results;
+    }
+    return;
+  } catch (error) {
+    console.log(error);
+  }
+};
