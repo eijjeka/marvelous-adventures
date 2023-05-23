@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Form = styled.form`
+  position: relative;
+`;
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -29,7 +33,7 @@ export const Input = styled.input`
   border: none;
   color: #fafafa;
 
-  &::placeholder {
+  ::placeholder {
     text-transform: uppercase;
     color: #fafafa;
   }
@@ -53,5 +57,31 @@ export const Button = styled.button`
   @media screen and (min-width: 768px) {
     width: 18px;
     height: 18px;
+  }
+`;
+
+export const SearchListContanier = styled.div`
+  position: absolute;
+  width: 100%;
+
+  color: #fff;
+  background-color: #000000;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+`;
+
+export const SearchList = styled.ul`
+  list-style: none;
+  max-height: ${({ count }) => (count > 10 ? "200px" : "")};
+  overflow-y: ${({ count }) => (count > 0 ? "scroll" : "")};
+`;
+
+export const SearchListItem = styled.li`
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+
+  :hover {
+    background-color: #181819;
   }
 `;

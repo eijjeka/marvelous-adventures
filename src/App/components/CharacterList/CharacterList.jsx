@@ -27,14 +27,20 @@ export const CharacterList = () => {
         const items = data?.filter(
           (el) => el.thumbnail.path.indexOf("image_not_available") === -1
         );
-        console.log(items);
         setCharacters(items);
-        sectionRef.current.scrollIntoView({ behavior: "smooth" });
+
+        const elementPosition = sectionRef.current.offsetTop;
+        const offsetPosition = elementPosition - 90;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       });
     }
   }, [query]);
 
-  const HandleClick = (e) => {
+  const handleClick = (e) => {
     setId(e.currentTarget.id);
     setIsOpen(true);
   };
@@ -47,7 +53,7 @@ export const CharacterList = () => {
             <Title>Search Characters</Title>
             <List>
               {characters.map((el) => (
-                <Item key={el.id} onClick={HandleClick} id={el.id}>
+                <Item key={el.id} onClick={handleClick} id={el.id}>
                   <CardImgContainer>
                     <CardImg
                       src={`${el.thumbnail.path}.${el.thumbnail.extension}`}
