@@ -6,8 +6,11 @@ import { Button } from "./../../shared/Button/Button";
 import { SubTitle, Title, Description } from "./ComicsHero.styled";
 console.log("heros: ", heros);
 
-export const ComicsHero = () => {
-  const { state } = useLocation();
+export const ComicsHero = ({ state }) => {
+  // const { state } = useLocation();
+  const Location = useLocation();
+  console.log("Location: ", Location);
+
   return (
     <ComicsHeroSection>
       <Container>

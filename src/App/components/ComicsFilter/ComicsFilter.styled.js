@@ -37,7 +37,10 @@ export const Select = styled.select`
 `;
 
 export const Option = styled.option`
+  border-radius: 100px;
+  padding: 40px;
   font-size: 12px;
   line-height: 1.17;
   color: rgba(250, 250, 250, 0.3);
+  color: tomato; /* измените цвет текста на свой */
 `;

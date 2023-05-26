@@ -1,5 +1,6 @@
 import { Section } from "App/shared/Section/Section";
 import { Container } from "App/shared/Container/Container";
+import { CustomSelect } from "./../../shared/CustomSelect/CustomSelect";
 import {
   FilterForm,
   Label,
@@ -10,6 +11,17 @@ import {
 } from "./ComicsFilter.styled";
 
 export const ComicsFilter = (second) => {
+  const optionsSelect = [
+    "Comic",
+    "Magazine",
+    "Trade paperback",
+    "Hardcover",
+    "Digest",
+    "Graphic novel",
+    "Digital comic",
+    "Infinite comic",
+  ];
+
   return (
     <Section>
       <Container>
@@ -21,16 +33,7 @@ export const ComicsFilter = (second) => {
           <WrapperSelect>
             <Label>
               Format
-              <Select>
-                <Option>Comic</Option>
-                <Option>Magazine</Option>
-                <Option>Trade paperback</Option>
-                <Option>Hardcover</Option>
-                <Option>Digest</Option>
-                <Option>Graphic novel</Option>
-                <Option>Digital comic</Option>
-                <Option>DigInfinite comicest</Option>
-              </Select>
+              <CustomSelect options={optionsSelect} />
             </Label>
             <Label>
               Order by
