@@ -59,7 +59,7 @@ export const Title = styled.h2`
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
-  color: #fafafa;
+  color: var(--main-text-color);
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
@@ -85,7 +85,7 @@ export const Description = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.28;
-  color: #fafafa;
+  color: var(--main-text-color);
   margin-bottom: 32px;
 
   @media screen and (min-width: 768px) {

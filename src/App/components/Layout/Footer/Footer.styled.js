@@ -28,7 +28,7 @@ export const LinkItem = styled(Link)`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
-  color: #fafafa;
+  color: var(--main-text-color);
   text-decoration: none;
 
   @media screen and (min-width: 768px) {

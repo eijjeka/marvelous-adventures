@@ -9,7 +9,7 @@ export const Title = styled.h2`
   line-height: 1.14;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #fafafa;
+  color: var(--main-text-color);
 
   @media screen and (min-width: 768px) {
     margin-bottom: 64px;

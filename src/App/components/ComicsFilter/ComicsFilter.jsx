@@ -1,17 +1,19 @@
 import { Section } from "App/shared/Section/Section";
 import { Container } from "App/shared/Container/Container";
 import { CustomSelect } from "./../../shared/CustomSelect/CustomSelect";
+import icon from "App/assets/images/sprite.svg";
+
 import {
   FilterForm,
   Label,
   InputText,
   WrapperSelect,
-  Select,
-  Option,
+  Svg,
+  WrapInput,
 } from "./ComicsFilter.styled";
 
 export const ComicsFilter = (second) => {
-  const optionsSelect = [
+  const optionsSelectFormat = [
     "Comic",
     "Magazine",
     "Trade paperback",
@@ -22,25 +24,29 @@ export const ComicsFilter = (second) => {
     "Infinite comic",
   ];
 
+  const optionsSelectOrder = ["Title", "On Sale Date"];
+
   return (
-    <Section>
+    <Section padding="20px 0 80px">
       <Container>
         <FilterForm>
           <Label>
             Title Starts With
-            <InputText placeholder="Enter text" />
+            <WrapInput>
+              <InputText placeholder="Enter text" />
+              <Svg>
+                <use href={icon + "#icon-search"} />
+              </Svg>
+            </WrapInput>
           </Label>
           <WrapperSelect>
             <Label>
               Format
-              <CustomSelect options={optionsSelect} />
+              <CustomSelect options={optionsSelectFormat} />
             </Label>
             <Label>
               Order by
-              <Select>
-                <Option>Title</Option>
-                <Option>On Sale Date</Option>
-              </Select>
+              <CustomSelect options={optionsSelectOrder} />
             </Label>
           </WrapperSelect>
         </FilterForm>

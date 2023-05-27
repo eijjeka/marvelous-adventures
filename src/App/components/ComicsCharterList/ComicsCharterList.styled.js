@@ -4,7 +4,7 @@ export const Title = styled.h2`
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
-  color: #fafafa;
+  color: var(--main-text-color);
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
@@ -42,6 +42,6 @@ export const ItemTitle = styled.h3`
   font-weight: 500;
   font-size: 14px;
   line-height: 1.33;
-  color: #fafafa;
+  color: var(--main-text-color);
   letter-spacing: -0.02em;
 `;

@@ -51,7 +51,7 @@ export const Name = styled.h3`
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: -0.02em;
-  color: #fafafa;
+  color: var(--main-text-color);
 
   @media ${(props) => props.theme.media.tablet} {
     margin-bottom: 8px;

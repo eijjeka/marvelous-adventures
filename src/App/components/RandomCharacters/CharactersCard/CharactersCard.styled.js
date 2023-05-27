@@ -19,7 +19,8 @@ export const CardTitle = styled.h3`
   line-height: 1.33;
   letter-spacing: -0.02em;
 
-  color: ${({ active, id }) => (active.id === id ? "#4B50AD" : "#fafafa")};
+  color: ${({ active, id }) =>
+    active.id === id ? "#4B50AD" : "var(--main-text-color)"};
 
   @media screen and (min-width: 768px) {
     font-size: 24px;

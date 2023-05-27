@@ -1,28 +1,51 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const FilterForm = styled.form``;
+export const FilterForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
 
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
+  gap: 4px;
+  width: ${({ width }) => (width ? width : "100%")};
   font-size: 12px;
   line-height: 1.17;
 
   color: rgba(250, 250, 250, 0.3);
 `;
+export const WrapInput = styled.span`
+  position: relative;
+`;
 
 export const InputText = styled.input`
   width: 100%;
   height: 46px;
-  padding: 14px 0 14px 24px;
-  background: #34387f;
+  padding: 14px 46px 14px 24px;
+  color: var(--main-text-color);
+  background-color: var(--accent-color);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 100px;
+  &::placeholder {
+    color: var(--main-text-color);
+  }
 `;
 
 export const WrapperSelect = styled.div`
   display: flex;
+
   gap: 8px;
+`;
+
+export const Svg = styled.svg`
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
 `;
 
 export const Select = styled.select`
@@ -30,9 +53,9 @@ export const Select = styled.select`
   font-size: 14px;
   line-height: 1.29px;
   padding: 14px 24px;
-  color: #fafafa;
+  color: var(--main-text-color);
   background: #171717;
-  border: 2px solid #34387f;
+  border: 2px solid var(--accent-color);
   border-radius: 100px;
 `;
 

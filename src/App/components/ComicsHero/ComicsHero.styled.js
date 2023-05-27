@@ -61,7 +61,7 @@ export const Title = styled.h1`
   font-size: 60px;
   line-height: 1;
   letter-spacing: -0.02em;
-  color: #fafafa;
+  color: var(--main-text-color);
 
   @media ${(props) => props.theme.media.tablet} {
     font-size: 150px;
@@ -78,7 +78,7 @@ export const Description = styled.p`
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: 0.02em;
-  color: #fafafa;
+  color: var(--main-text-color);
 
   @media ${(props) => props.theme.media.tablet} {
     width: 469px;

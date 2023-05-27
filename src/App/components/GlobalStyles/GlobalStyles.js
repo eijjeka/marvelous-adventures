@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
   --panther-color: #34387F;
   --spider-color: #600404;
   --hulk-color: #5B7F3C;
+  --accent-color: #34387F;
 }  
 
 body {
