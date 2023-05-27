@@ -68,3 +68,7 @@ export const CardTitle = styled.h2`
   letter-spacing: -0.02em;
   color: #fafafa;
 `;
+
+export const NotFoundImg = styled.img`
+  margin: 0 auto;
+`;

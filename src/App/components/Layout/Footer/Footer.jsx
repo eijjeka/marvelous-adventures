@@ -11,7 +11,7 @@ export const Footer = () => {
         {/* list link to page in footer */}
         <List>
           <li>
-            <LinkItem>Characters</LinkItem>
+            <LinkItem to="/characters">Characters</LinkItem>
           </li>
           <li>
             <LinkItem>Comics</LinkItem>

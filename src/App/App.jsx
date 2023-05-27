@@ -10,7 +10,11 @@ const Layout = lazy(() =>
 );
 
 const HomePage = lazy(() =>
-  import("./views/Homepage" /* webpackChunkName: "layout" */)
+  import("./views/Homepage" /* webpackChunkName: "HomePage" */)
+);
+
+const Characters = lazy(() =>
+  import("./views/Characters" /* webpackChunkName: "Characters" */)
 );
 
 export const App = () => {
@@ -21,6 +25,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
+            <Route path="/characters" element={<Characters />} />
           </Route>
         </Routes>
       </Suspense>
