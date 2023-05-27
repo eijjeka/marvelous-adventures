@@ -28,7 +28,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <HeroSection padding={"92px 0 80px"} bgc={"#0C0B0B"}>
+    <HeroSection bgc={"#0C0B0B"}>
       <Container>{currentHero && <HeroItem {...currentHero} />}</Container>
     </HeroSection>
   );

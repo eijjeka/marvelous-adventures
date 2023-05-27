@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import GlobalStyles from "./components/GlobalStyles/GlobalStyles";
 import theme from "./services/theme";
+import { ComicsPage } from "./views/ComicsPage/ComicsPage";
 import { Loader } from "./components/Loader";
 
 const Layout = lazy(() =>
@@ -25,6 +26,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
+            <Route path="comics" element={<ComicsPage />} />
             <Route path="/characters" element={<Characters />} />
           </Route>
         </Routes>

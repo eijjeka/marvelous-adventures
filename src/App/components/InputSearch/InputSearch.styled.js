@@ -31,11 +31,11 @@ export const Input = styled.input`
   background-color: transparent;
   outline: none;
   border: none;
-  color: #fafafa;
+  color: var(--main-text-color);
 
   ::placeholder {
     text-transform: uppercase;
-    color: #fafafa;
+    color: var(--main-text-color);
   }
 `;
 

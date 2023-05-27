@@ -3,10 +3,14 @@ import { Section } from "../../shared/Section/Section";
 import { Button } from "App/shared/Button/Button";
 
 export const HeroSection = styled(Section)`
+  @media ${(props) => props.theme.media.phone} {
+    padding-top: 92px;
+    padding-bottom: 80px;
+  }
   @media ${(props) => props.theme.media.tablet} {
     padding-top: 146px;
   }
-  @media ${(props) => props.theme.media.tablet} {
+  @media ${(props) => props.theme.media.desktop} {
     padding-top: 210px;
     padding-bottom: 185px;
   }

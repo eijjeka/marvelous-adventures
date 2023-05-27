@@ -14,7 +14,7 @@ import {
   WrapperImages,
 } from "./Hero.styled";
 
-import getPathImg from "App/services/getPathImg";
+import getPathImg from "App/services/getPathStaticImg";
 import styled from "styled-components";
 import { PaginationHeroPage } from "./PaginationHeroPage";
 
@@ -38,6 +38,7 @@ export const HeroItem = ({ name, imgName, colors, description }) => {
             Characters
           </ColorButton>
           <Button
+            to={"/comics"}
             colorBg={colors.main}
             border={"1px solid rgba(250, 250, 250, 0.5);"}
           >
@@ -64,7 +65,7 @@ export const HeroItem = ({ name, imgName, colors, description }) => {
           <span></span>
           <DescriptionWrapper>
             <h2>Characters</h2>
-            <p class="description-hero">{description}</p>
+            <p className="description-hero">{description}</p>
           </DescriptionWrapper>
           <StyledGradientBg colorBg={colors.gradientBg} />
         </StyledWrapperImg>

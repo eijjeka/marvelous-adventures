@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(Link)`
+  display: ${({ display }) => display || "inline-block"};
+  width: ${({ width }) => width || "auto"};
   padding: ${({ padding }) => padding || "12px 24px"};
   margin-top: ${({ mt }) => mt || 0};
   margin-right: ${({ mr }) => mr || 0};
@@ -11,19 +14,15 @@ export const StyledButton = styled.button`
   font-size: ${({ fs }) => fs || "14px"};
   line-height: ${({ lh }) => lh || 1.29};
   text-transform: ${({ tt }) => tt || "uppercase"};
+  text-decoration: none;
   color: ${({ color }) => color || "var(--main-text-color)"};
   background-color: ${({ bgc }) => bgc || "transparent"};
   border: ${({ border }) => border || "1px solid transparent"};
   border-radius: ${({ br }) => br || "1000px"};
-  cursor: pointer;
   transition-property: transform, box-shadow, color;
   transition-duration: 300ms, 500ms, 500ms;
   transition-timing-function: linear;
 
-  @media ${(props) => props.theme.media.tablet} {
-    font-size: 18px;
-    line-height: 1.6;
-  }
   &:hover,
   &:focus {
     color: black;
