@@ -1,11 +1,15 @@
 {
   "files": {
-    "main.css": "/marvelous-adventures/static/css/main.92a37d29.css",
-    "main.js": "/marvelous-adventures/static/js/main.abcb1a4c.js",
-    "layout.js": "/marvelous-adventures/static/js/layout.f06ff679.chunk.js",
-    "static/js/49.394094d2.chunk.js": "/marvelous-adventures/static/js/49.394094d2.chunk.js",
+    "main.css": "/marvelous-adventures/static/css/main.3daebe69.css",
+    "main.js": "/marvelous-adventures/static/js/main.99b0d19b.js",
+    "layout.js": "/marvelous-adventures/static/js/layout.44c86afc.chunk.js",
+    "HomePage.js": "/marvelous-adventures/static/js/HomePage.8fda3ed8.chunk.js",
+    "Characters.js": "/marvelous-adventures/static/js/Characters.46031f93.chunk.js",
+    "static/js/249.ac04bb7c.chunk.js": "/marvelous-adventures/static/js/249.ac04bb7c.chunk.js",
+    "static/js/426.fbb59744.chunk.js": "/marvelous-adventures/static/js/426.fbb59744.chunk.js",
     "static/media/spider-bg@2x.jpg": "/marvelous-adventures/static/media/spider-bg@2x.0a6741b5c273c402530d.jpg",
     "static/media/comics-bg@2x.jpg": "/marvelous-adventures/static/media/comics-bg@2x.c4204304acd810e4f811.jpg",
+    "static/media/comics-bg-tab@2x.jpg": "/marvelous-adventures/static/media/comics-bg-tab@2x.f688e9e3734495b053f4.jpg",
     "static/media/spider-bg.jpg": "/marvelous-adventures/static/media/spider-bg.55335d96fbe1ac5db8b9.jpg",
     "static/media/hulk-transparent-1@2x.jpg": "/marvelous-adventures/static/media/hulk-transparent-1@2x.93e509c0442efe55ca2a.jpg",
     "static/media/comics-bg.jpg": "/marvelous-adventures/static/media/comics-bg.7bf4f28d4b1fd319ad62.jpg",
@@ -15,12 +19,15 @@
     "static/media/hulk-1@2x.jpg": "/marvelous-adventures/static/media/hulk-1@2x.43d3e786a5251371021f.jpg",
     "static/media/spider-m-2@2x.jpg": "/marvelous-adventures/static/media/spider-m-2@2x.bc918074738bca1f96a5.jpg",
     "static/media/SFProText-Regular.ttf": "/marvelous-adventures/static/media/SFProText-Regular.cc7ed75809867295f613.ttf",
+    "static/media/comics-bg-mob@2x.jpg": "/marvelous-adventures/static/media/comics-bg-mob@2x.b412a20fe0aa6ab4d784.jpg",
     "static/media/hulk-m-2@2x.jpg": "/marvelous-adventures/static/media/hulk-m-2@2x.eed03d795ac17b47fe03.jpg",
     "static/media/hulk-2@2x.jpg": "/marvelous-adventures/static/media/hulk-2@2x.f2ea5ad6aec4981b6aec.jpg",
     "static/media/panther-2@2x.jpg": "/marvelous-adventures/static/media/panther-2@2x.eecec7d779ef1994c94b.jpg",
     "static/media/panther-m-2@2x.jpg": "/marvelous-adventures/static/media/panther-m-2@2x.f53f18a8827dac6d0d7a.jpg",
+    "static/media/comics-bg-tab.jpg": "/marvelous-adventures/static/media/comics-bg-tab.d0df9f27ad3a9742df39.jpg",
     "static/media/hulk-transparent-1.jpg": "/marvelous-adventures/static/media/hulk-transparent-1.273b44e502ed9597ae68.jpg",
     "static/media/panther-1.jpg": "/marvelous-adventures/static/media/panther-1.c38e60ecb56dc3f20db5.jpg",
+    "static/media/imagesp.jpg": "/marvelous-adventures/static/media/imagesp.ef268f94c5fdcc115620.jpg",
     "static/media/spider-1.jpg": "/marvelous-adventures/static/media/spider-1.8b5264e4f489076dc645.jpg",
     "static/media/Poppins-Regular.ttf": "/marvelous-adventures/static/media/Poppins-Regular.a2c18a155db081c49d9b.ttf",
     "static/media/Poppins-Medium.ttf": "/marvelous-adventures/static/media/Poppins-Medium.948fb9dbf93582f2bbd1.ttf",
@@ -31,6 +38,7 @@
     "static/media/hulk-1.jpg": "/marvelous-adventures/static/media/hulk-1.3d1b498dd19ca6f4e9bb.jpg",
     "static/media/hulk-m-2.jpg": "/marvelous-adventures/static/media/hulk-m-2.1a0d32aae101eb9d71b6.jpg",
     "static/media/hulk-2.jpg": "/marvelous-adventures/static/media/hulk-2.ecc873081eba5ed04957.jpg",
+    "static/media/comics-bg-mob.jpg": "/marvelous-adventures/static/media/comics-bg-mob.2918e4a6bacfd58abda9.jpg",
     "static/media/panther-2.jpg": "/marvelous-adventures/static/media/panther-2.574e0d50b9c27196d72e.jpg",
     "static/media/panther-m-2.jpg": "/marvelous-adventures/static/media/panther-m-2.9468f206b9afafb99820.jpg",
     "static/media/SFProText-Regular.woff2": "/marvelous-adventures/static/media/SFProText-Regular.ebbb25d0408384a6398c.woff2",
@@ -48,13 +56,16 @@
     "static/media/HelveticaNeueCyr-Roman.woff": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.d5ae05d4ba6fb85421b0.woff",
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
-    "main.92a37d29.css.map": "/marvelous-adventures/static/css/main.92a37d29.css.map",
-    "main.abcb1a4c.js.map": "/marvelous-adventures/static/js/main.abcb1a4c.js.map",
-    "layout.f06ff679.chunk.js.map": "/marvelous-adventures/static/js/layout.f06ff679.chunk.js.map",
-    "49.394094d2.chunk.js.map": "/marvelous-adventures/static/js/49.394094d2.chunk.js.map"
+    "main.3daebe69.css.map": "/marvelous-adventures/static/css/main.3daebe69.css.map",
+    "main.99b0d19b.js.map": "/marvelous-adventures/static/js/main.99b0d19b.js.map",
+    "layout.44c86afc.chunk.js.map": "/marvelous-adventures/static/js/layout.44c86afc.chunk.js.map",
+    "HomePage.8fda3ed8.chunk.js.map": "/marvelous-adventures/static/js/HomePage.8fda3ed8.chunk.js.map",
+    "Characters.46031f93.chunk.js.map": "/marvelous-adventures/static/js/Characters.46031f93.chunk.js.map",
+    "249.ac04bb7c.chunk.js.map": "/marvelous-adventures/static/js/249.ac04bb7c.chunk.js.map",
+    "426.fbb59744.chunk.js.map": "/marvelous-adventures/static/js/426.fbb59744.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92a37d29.css",
-    "static/js/main.abcb1a4c.js"
+    "static/css/main.3daebe69.css",
+    "static/js/main.99b0d19b.js"
   ]
 }
