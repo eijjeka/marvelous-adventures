@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import { SearchContext } from "App/components/Layout/Layout";
 import * as marvelAPI from "App/services/services.js";
+import notFound from "App/assets/images/PlaceHolder.png";
 
 import { Container } from "App/shared/Container/Container";
 import { DetailsCharacter } from "../DetailsCharacter";
@@ -12,14 +13,16 @@ import {
   CardImgContainer,
   CardImg,
   CardTitle,
+  NotFoundImg,
 } from "./CharacterList.styled";
 
 export const CharacterList = () => {
   const sectionRef = useRef();
-  const [isOpen, setIsOpen] = useState(false);
-  const [id, setId] = useState(null);
   const { query } = useContext(SearchContext);
+  const [id, setId] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   const [characters, setCharacters] = useState([]);
+  const [findData, setFindData] = useState(false);
 
   useEffect(() => {
     if (query !== "") {
@@ -37,6 +40,8 @@ export const CharacterList = () => {
           behavior: "smooth",
         });
       });
+
+      setFindData(true);
     }
   }, [query]);
 
@@ -47,25 +52,29 @@ export const CharacterList = () => {
 
   return (
     <>
-      <Section ref={sectionRef}>
-        {characters && characters.length > 0 && (
-          <Container>
+      {findData && (
+        <Section ref={sectionRef}>
+          <Container value={findData}>
             <Title>Search Characters</Title>
-            <List>
-              {characters.map((el) => (
-                <Item key={el.id} onClick={handleClick} id={el.id}>
-                  <CardImgContainer>
-                    <CardImg
-                      src={`${el.thumbnail.path}.${el.thumbnail.extension}`}
-                    />
-                  </CardImgContainer>
-                  <CardTitle>{el.name}</CardTitle>
-                </Item>
-              ))}
-            </List>
+            {characters && characters.length > 0 ? (
+              <List>
+                {characters.map((el) => (
+                  <Item key={el.id} onClick={handleClick} id={el.id}>
+                    <CardImgContainer>
+                      <CardImg
+                        src={`${el.thumbnail.path}.${el.thumbnail.extension}`}
+                      />
+                    </CardImgContainer>
+                    <CardTitle>{el.name}</CardTitle>
+                  </Item>
+                ))}
+              </List>
+            ) : (
+              <NotFoundImg src={notFound} alt="" />
+            )}
           </Container>
-        )}
-      </Section>
+        </Section>
+      )}
       {isOpen && <DetailsCharacter setActive={setIsOpen} id={id} />}
     </>
   );

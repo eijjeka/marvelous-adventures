@@ -18,8 +18,6 @@ export const ComicsCharterList = ({ id }) => {
     // eslint-disable-next-line
   }, []);
 
-  console.log(comics);
-
   return (
     <>
       <Title>List of comics</Title>
