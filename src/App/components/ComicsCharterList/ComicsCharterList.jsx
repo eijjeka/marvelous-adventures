@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import * as marvelAPI from "App/services/services.js";
 
-import { Title, List, Image, ItemTitle } from "./ComicsCharterList.styled";
+import {
+  Title,
+  List,
+  Image,
+  ItemTitle,
+  TitleWriter,
+  // ImageWrapper,
+} from "./ComicsCharterList.styled";
 
 export const ComicsCharterList = ({ id }) => {
   const [comics, setComics] = useState([]);
@@ -19,11 +26,15 @@ export const ComicsCharterList = ({ id }) => {
           {comics.map((el) => (
             <li key={el.id}>
               <Image
-                src={`${el.images[0].path}.${el.images[0].extension}`}
+                src={
+                  el.images[0]
+                    ? `${el.images[0].path}.${el.images[0].extension}`
+                    : `${el.thumbnail.path}.${el.thumbnail.extension}`
+                }
                 alt=""
               />
               <ItemTitle>{el.title}</ItemTitle>
-              {/* <p></p> */}
+              <TitleWriter>{el.creators.items[0]?.name}</TitleWriter>
             </li>
           ))}
         </List>

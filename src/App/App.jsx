@@ -1,21 +1,36 @@
-import { Layout } from "./components/Layout";
+import { Suspense, lazy } from "react";
 import { ThemeProvider } from "styled-components";
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "./views/Homepage";
 import GlobalStyles from "./components/GlobalStyles/GlobalStyles";
 import theme from "./services/theme";
 import { ComicsPage } from "./views/ComicsPage/ComicsPage";
+import { Loader } from "./components/Loader";
+
+const Layout = lazy(() =>
+  import("./components/Layout" /* webpackChunkName: "layout" */)
+);
+
+const HomePage = lazy(() =>
+  import("./views/Homepage" /* webpackChunkName: "HomePage" */)
+);
+
+const Characters = lazy(() =>
+  import("./views/Characters" /* webpackChunkName: "Characters" */)
+);
 
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="comics" element={<ComicsPage />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <GlobalStyles />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="comics" element={<ComicsPage />} />
+            <Route path="/characters" element={<Characters />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </ThemeProvider>
   );
 };

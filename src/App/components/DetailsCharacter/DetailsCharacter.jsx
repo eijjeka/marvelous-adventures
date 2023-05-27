@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import * as marvelAPI from "App/services/services.js";
 import moment from "moment";
+
 import {
+  Container,
   Svg,
   Meta,
   Title,
   CloseBtn,
   Date,
+  CardImgContainer,
   CardImg,
   Description,
-  Wrapper,
+  WrapperCard,
 } from "./DetailsCharacter.styled";
 
 import icon from "App/assets/images/sprite.svg";
 import { ComicsCharterList } from "../ComicsCharterList";
+import { Modal } from "App/components/Modal";
 
-export const DetailsCharacter = ({ onClose, id }) => {
+export const DetailsCharacter = ({ setActive, id }) => {
   const [character, setCharacter] = useState("");
 
   useEffect(() => {
@@ -26,24 +30,28 @@ export const DetailsCharacter = ({ onClose, id }) => {
   return (
     <>
       {character && (
-        <>
-          <CloseBtn onClick={() => onClose(false)}>
-            <Svg>
-              <use href={icon + "#icon-close"} />
-            </Svg>
-          </CloseBtn>
-          <Wrapper>
-            <CardImg
-              src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-            />
-            <Meta>
-              <Title>{character.name}</Title>
-              <Date>{moment(character.modified).format("MMMM D, YYYY")}</Date>
-              <Description>{character.description}</Description>
-              <ComicsCharterList id={id} />
-            </Meta>
-          </Wrapper>
-        </>
+        <Modal setActive={setActive}>
+          <Container>
+            <CloseBtn onClick={() => setActive(false)}>
+              <Svg>
+                <use href={icon + "#icon-close"} />
+              </Svg>
+            </CloseBtn>
+            <WrapperCard>
+              <CardImgContainer>
+                <CardImg
+                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                />
+              </CardImgContainer>
+              <Meta>
+                <Title>{character.name}</Title>
+                <Date>{moment(character.modified).format("MMMM D, YYYY")}</Date>
+                <Description>{character.description}</Description>
+                <ComicsCharterList id={id} />
+              </Meta>
+            </WrapperCard>
+          </Container>
+        </Modal>
       )}
     </>
   );

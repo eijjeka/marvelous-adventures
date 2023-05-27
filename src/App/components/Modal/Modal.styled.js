@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Container } from "App/shared/Container/Container";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -10,10 +9,18 @@ export const Overlay = styled.div`
 
   z-index: 1000;
   overflow: auto;
-
   background: #0d0b0b;
+
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
-export const Wrapper = styled(Container)`
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: start;
   pointer-events: none;
 `;
