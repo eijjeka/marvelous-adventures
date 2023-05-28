@@ -10,7 +10,7 @@ export const Select = styled.button`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 14px 24px;
+  padding: 14px 18px;
   font-size: 14px;
   line-height: 1.29;
   color: var(--main-text-color);
@@ -18,6 +18,13 @@ export const Select = styled.button`
   border: 2px solid #34387f;
   border-radius: 100px;
   cursor: pointer;
+
+  @media ${(props) => props.theme.media.tablet} {
+    /* font-size: 16px;
+    line-height: 1.12; */
+  }
+  @media ${(props) => props.theme.media.desktop} {
+  }
 `;
 
 export const Svg = styled.svg`
@@ -31,7 +38,6 @@ export const OptionList = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
   padding: 14px 27px;
   background-color: #171717;
   border-radius: 16px;
@@ -43,6 +49,7 @@ export const OptionList = styled.ul`
 export const OptionItem = styled.li``;
 export const Option = styled.button`
   width: 100%;
+  padding: 4px 0;
   text-align: left;
   font-weight: 400;
   font-size: 12px;
@@ -54,5 +61,12 @@ export const Option = styled.button`
   &:hover,
   &:focus {
     color: var(--main-text-color);
+  }
+
+  @media ${(props) => props.theme.media.tablet} {
+    /* font-size: 14px;
+    line-height: 1.29; */
+  }
+  @media ${(props) => props.theme.media.desktop} {
   }
 `;
