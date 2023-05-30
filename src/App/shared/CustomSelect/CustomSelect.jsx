@@ -9,7 +9,7 @@ import {
   Svg,
 } from "./CustomSelect.styled";
 
-export const CustomSelect = ({ state, options }) => {
+export const CustomSelect = ({ onSelect, options }) => {
   const [currentOption, setCurrentOption] = useState(options[0]);
   const [optionsIsOpen, setOptionsIsOpen] = useState(false);
   const selectRef = useRef();
@@ -51,7 +51,7 @@ export const CustomSelect = ({ state, options }) => {
         </Svg>
       </Select>
       <OptionList ref={optionListRef} isOpen={optionsIsOpen}>
-        {options.map((opt) => {
+        {options?.map((opt) => {
           return (
             <OptionItem key={opt}>
               <Option onClick={handleClickOnOption} type="button">

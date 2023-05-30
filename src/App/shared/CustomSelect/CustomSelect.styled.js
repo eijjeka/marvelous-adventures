@@ -14,8 +14,8 @@ export const Select = styled.button`
   font-size: 14px;
   line-height: 1.29;
   color: var(--main-text-color);
-  background: #171717;
-  border: 2px solid #34387f;
+  background-color: ${({ bgc }) => (bgc ? "bgc" : "#171717")};
+  border: 2px solid var(--accent-color);
   border-radius: 100px;
   cursor: pointer;
 
