@@ -16,7 +16,7 @@ import {
 } from "./DetailsCharacter.styled";
 
 import icon from "App/assets/images/sprite.svg";
-import { ComicsCharterList } from "../ComicsCharterList";
+import { ComicsCharterList } from "../ComicsPage/ComicsCharterList";
 import { Modal } from "App/components/Modal";
 
 export const DetailsCharacter = ({ setActive, id }) => {

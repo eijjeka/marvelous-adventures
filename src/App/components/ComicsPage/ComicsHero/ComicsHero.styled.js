@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Section } from "./../../shared/Section/Section";
-import getPathImg from "../../services/getPathStaticImg";
+import { Section } from "../../../shared/Section/Section";
+import getPathImg from "../../../services/getPathStaticImg";
 
 export const ComicsHeroSection = styled(Section)`
   padding-top: 220px;
@@ -36,7 +36,6 @@ export const ComicsHeroSection = styled(Section)`
 
 export const SubTitle = styled.p`
   margin-bottom: 14px;
-  font-family: "Poppins";
   font-size: 14px;
   line-height: 1.29;
 
@@ -56,7 +55,6 @@ export const SubTitle = styled.p`
 
 export const Title = styled.h1`
   margin-bottom: 16px;
-  font-family: "Poppins";
   font-weight: 500;
   font-size: 60px;
   line-height: 1;
@@ -73,8 +71,6 @@ export const Title = styled.h1`
 
 export const Description = styled.p`
   margin-bottom: 71px;
-  font-family: "Poppins";
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: 0.02em;

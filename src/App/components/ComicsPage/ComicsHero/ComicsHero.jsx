@@ -1,15 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Container } from "App/shared/Container/Container";
-import heros from "App/assets/data/hero.json";
 import { ComicsHeroSection } from "./ComicsHero.styled";
-import { Button } from "./../../shared/Button/Button";
+import { Button } from "../../../shared/Button/Button";
 import { SubTitle, Title, Description } from "./ComicsHero.styled";
-console.log("heros: ", heros);
 
-export const ComicsHero = ({ state }) => {
-  // const { state } = useLocation();
-  const Location = useLocation();
-  console.log("Location: ", Location);
+export const ComicsHero = () => {
+  const { state } = useLocation();
 
   return (
     <ComicsHeroSection>

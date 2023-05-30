@@ -1,4 +1,4 @@
-import { Hero } from "App/components/Hero/Hero";
+import { Hero } from "App/components/MainPage/Hero/Hero";
 import { CharacterList } from "App/components/CharacterList";
 import { RandomCharacters } from "App/components/RandomCharacters";
 

@@ -1,15 +1,15 @@
 import { Section } from "App/shared/Section/Section";
 import { Container } from "App/shared/Container/Container";
-import { CustomSelect } from "./../../shared/CustomSelect/CustomSelect";
-import icon from "App/assets/images/sprite.svg";
+import { CustomSelect } from "../../../shared/CustomSelect/CustomSelect";
 
+import { InputSearchByText } from "../../../shared/InputSearchByText/InputSearchByText";
 import {
   FilterForm,
-  Label,
-  InputText,
   WrapperSelect,
-  Svg,
-  WrapInput,
+  LabelSearch,
+  LabelFormatSelect,
+  LabelOderSelect,
+  LabelData,
 } from "./ComicsFilter.styled";
 
 export const ComicsFilter = (second) => {
@@ -26,29 +26,30 @@ export const ComicsFilter = (second) => {
 
   const optionsSelectOrder = ["Title", "On Sale Date"];
 
+  const fakeOption = ["05/08/2022", "10/12/2022", "23/11/2022"];
+
   return (
     <Section padding="20px 0 80px">
       <Container>
         <FilterForm>
-          <Label>
+          <LabelSearch>
             Title Starts With
-            <WrapInput>
-              <InputText placeholder="Enter text" />
-              <Svg>
-                <use href={icon + "#icon-search"} />
-              </Svg>
-            </WrapInput>
-          </Label>
+            <InputSearchByText placeholder="Enter text" />
+          </LabelSearch>
           <WrapperSelect>
-            <Label>
+            <LabelFormatSelect>
               Format
               <CustomSelect options={optionsSelectFormat} />
-            </Label>
-            <Label>
+            </LabelFormatSelect>
+            <LabelOderSelect>
               Order by
               <CustomSelect options={optionsSelectOrder} />
-            </Label>
+            </LabelOderSelect>
           </WrapperSelect>
+          <LabelData>
+            Start Year
+            <CustomSelect options={fakeOption} />
+          </LabelData>
         </FilterForm>
       </Container>
     </Section>

@@ -5,7 +5,7 @@ import {
   InnerDescription,
   Name,
   Author,
-} from "./../../shared/Wrapper/Wrapper";
+} from "../../../shared/Wrapper/Wrapper";
 
 export const ComicsCard = ({ path, name, author }) => {
   return (

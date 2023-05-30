@@ -1,5 +1,5 @@
 import { Container } from "App/shared/Container/Container";
-import { HeroSection } from "App/components/Hero/Hero.styled";
+import { HeroSection } from "App/components/MainPage/Hero/Hero.styled";
 import { HeroItem } from "./HeroItem";
 import heros from "App/assets/data/hero.json";
 import { useEffect, useState } from "react";
