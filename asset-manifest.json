@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/marvelous-adventures/static/css/main.3daebe69.css",
-    "main.js": "/marvelous-adventures/static/js/main.99b0d19b.js",
-    "layout.js": "/marvelous-adventures/static/js/layout.44c86afc.chunk.js",
-    "HomePage.js": "/marvelous-adventures/static/js/HomePage.8fda3ed8.chunk.js",
-    "Characters.js": "/marvelous-adventures/static/js/Characters.46031f93.chunk.js",
-    "static/js/249.ac04bb7c.chunk.js": "/marvelous-adventures/static/js/249.ac04bb7c.chunk.js",
+    "main.js": "/marvelous-adventures/static/js/main.d0397798.js",
+    "layout.js": "/marvelous-adventures/static/js/layout.8ff63d6b.chunk.js",
+    "HomePage.js": "/marvelous-adventures/static/js/HomePage.5f6ab342.chunk.js",
+    "Characters.js": "/marvelous-adventures/static/js/Characters.2eb712a2.chunk.js",
+    "static/js/249.8e08f01b.chunk.js": "/marvelous-adventures/static/js/249.8e08f01b.chunk.js",
     "static/js/426.fbb59744.chunk.js": "/marvelous-adventures/static/js/426.fbb59744.chunk.js",
     "static/media/spider-bg@2x.jpg": "/marvelous-adventures/static/media/spider-bg@2x.0a6741b5c273c402530d.jpg",
     "static/media/comics-bg@2x.jpg": "/marvelous-adventures/static/media/comics-bg@2x.c4204304acd810e4f811.jpg",
@@ -57,15 +57,15 @@
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
     "main.3daebe69.css.map": "/marvelous-adventures/static/css/main.3daebe69.css.map",
-    "main.99b0d19b.js.map": "/marvelous-adventures/static/js/main.99b0d19b.js.map",
-    "layout.44c86afc.chunk.js.map": "/marvelous-adventures/static/js/layout.44c86afc.chunk.js.map",
-    "HomePage.8fda3ed8.chunk.js.map": "/marvelous-adventures/static/js/HomePage.8fda3ed8.chunk.js.map",
-    "Characters.46031f93.chunk.js.map": "/marvelous-adventures/static/js/Characters.46031f93.chunk.js.map",
-    "249.ac04bb7c.chunk.js.map": "/marvelous-adventures/static/js/249.ac04bb7c.chunk.js.map",
+    "main.d0397798.js.map": "/marvelous-adventures/static/js/main.d0397798.js.map",
+    "layout.8ff63d6b.chunk.js.map": "/marvelous-adventures/static/js/layout.8ff63d6b.chunk.js.map",
+    "HomePage.5f6ab342.chunk.js.map": "/marvelous-adventures/static/js/HomePage.5f6ab342.chunk.js.map",
+    "Characters.2eb712a2.chunk.js.map": "/marvelous-adventures/static/js/Characters.2eb712a2.chunk.js.map",
+    "249.8e08f01b.chunk.js.map": "/marvelous-adventures/static/js/249.8e08f01b.chunk.js.map",
     "426.fbb59744.chunk.js.map": "/marvelous-adventures/static/js/426.fbb59744.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3daebe69.css",
-    "static/js/main.99b0d19b.js"
+    "static/js/main.d0397798.js"
   ]
 }
