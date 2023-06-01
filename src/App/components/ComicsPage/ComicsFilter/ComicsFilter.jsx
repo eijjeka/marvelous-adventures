@@ -1,8 +1,8 @@
 import { Section } from "App/shared/Section/Section";
 import { Container } from "App/shared/Container/Container";
-import { CustomSelect } from "../../../shared/CustomSelect/CustomSelect";
+import { CustomSelect } from "App/shared/CustomSelect/CustomSelect";
 
-import { InputSearchByText } from "../../../shared/InputSearchByText/InputSearchByText";
+import { InputSearchByText } from "App/shared/InputSearchByText/InputSearchByText";
 import {
   FilterForm,
   WrapperSelect,
