@@ -34,7 +34,7 @@ export const HeroItem = ({ name, imgName, colors, description }) => {
           today.
         </p>
         <StyledWrapperBtn>
-          <ColorButton colorBg={colors.main} mr={"8px"}>
+          <ColorButton colorBg={colors.main} mr={"8px"} to={"/characters"}>
             Characters
           </ColorButton>
           <Button

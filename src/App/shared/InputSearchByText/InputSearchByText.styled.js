@@ -9,8 +9,8 @@ export const InputText = styled.input`
   height: 46px;
   padding: 14px 46px 14px 24px;
   color: var(--main-text-color);
-  background-color: var(--accent-color);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: ${({ bgc }) => bgc || "var(--accent-color)"};
+  border: 2px solid #34387f;
   border-radius: 100px;
   &::placeholder {
     color: var(--main-text-color);

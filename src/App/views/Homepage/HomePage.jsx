@@ -1,6 +1,6 @@
 import { Hero } from "App/components/MainPage/Hero/Hero";
-import { CharacterList } from "App/components/CharacterList";
-import { RandomCharacters } from "App/components/RandomCharacters";
+import { CharacterList } from "App/components/HomePage/CharacterList";
+import { RandomCharacters } from "App/components/HomePage/RandomCharacters";
 
 export const HomePage = () => {
   return (

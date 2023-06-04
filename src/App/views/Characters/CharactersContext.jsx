@@ -3,16 +3,16 @@ import React, { createContext, useState } from "react";
 export const CharactersContext = createContext();
 
 export const CharactersProvider = ({ children }) => {
-  const [comics, setComics] = useState("");
-  const [date, setDate] = useState("");
-  const [name, setName] = useState("");
-  const [order, setOrder] = useState("");
+  const [nameComics, setNameComics] = useState(null);
+  const [date, setDate] = useState(null);
+  const [name, setName] = useState(null);
+  const [order, setOrder] = useState(null);
 
   return (
     <CharactersContext.Provider
       value={{
-        comics,
-        setComics,
+        nameComics,
+        setNameComics,
         date,
         setDate,
         name,
@@ -25,5 +25,3 @@ export const CharactersProvider = ({ children }) => {
     </CharactersContext.Provider>
   );
 };
-
-export default CharactersContext;

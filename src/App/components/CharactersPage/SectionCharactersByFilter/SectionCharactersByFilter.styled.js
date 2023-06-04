@@ -1,68 +1,52 @@
 import styled from "styled-components";
 
-export const FilterForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-top: 20px;
-
-  @media ${(props) => props.theme.media.phone} {
-  }
-  @media ${(props) => props.theme.media.tablet} {
-    flex-direction: row;
-  }
-  @media ${(props) => props.theme.media.desktop} {
-    justify-content: center;
-    align-items: center;
-  }
+export const Section = styled.section`
+  margin-top: 64px;
 `;
 
-export const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: ${({ width }) => (width ? width : "100%")};
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  margin-bottom: 4px;
-
-  color: rgba(250, 250, 250, 0.3);
+export const List = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  list-style: none;
 
   @media ${(props) => props.theme.media.tablet} {
-    gap: 8px;
-    font-size: 14px;
-    line-height: 1.29;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
   }
+
   @media ${(props) => props.theme.media.desktop} {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 `;
 
-export const LabelSearch = styled(Label)`
-  @media ${(props) => props.theme.media.desktop} {
-    width: 268px;
+export const Item = styled.li`
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+
+  :hover {
+    transform: scale(1.02);
   }
 `;
 
-export const LabelStartWith = styled(Label)`
-  @media ${(props) => props.theme.media.desktop} {
-    width: 190px;
-    order: 2;
-  }
+export const CardImg = styled.img`
+  display: block;
+  width: 332px;
+  height: 445px;
+  border-radius: 8px;
+  margin-bottom: 16px;
 `;
 
-export const LabelOrderBy = styled(Label)`
-  @media ${(props) => props.theme.media.desktop} {
-    width: 185px;
-    order: 1;
-  }
+export const Title = styled.h2`
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+
+  color: #fafafa;
 `;
 
-export const LabelDate = styled(Label)`
-  @media ${(props) => props.theme.media.desktop} {
-    width: 170px;
-    order: 3;
-  }
+export const NotFoundImg = styled.img`
+  margin: 0 auto;
 `;
