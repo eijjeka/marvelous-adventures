@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvelous-adventures/static/css/main.3daebe69.css",
-    "main.js": "/marvelous-adventures/static/js/main.61906484.js",
+    "main.js": "/marvelous-adventures/static/js/main.de06c17d.js",
     "layout.js": "/marvelous-adventures/static/js/layout.07354f0f.chunk.js",
     "HomePage.js": "/marvelous-adventures/static/js/HomePage.374a6115.chunk.js",
     "Characters.js": "/marvelous-adventures/static/js/Characters.ae65376e.chunk.js",
@@ -58,7 +58,7 @@
     "static/media/HelveticaNeueCyr-Roman.woff2": "/marvelous-adventures/static/media/HelveticaNeueCyr-Roman.77b3374728cb84fab8b0.woff2",
     "index.html": "/marvelous-adventures/index.html",
     "main.3daebe69.css.map": "/marvelous-adventures/static/css/main.3daebe69.css.map",
-    "main.61906484.js.map": "/marvelous-adventures/static/js/main.61906484.js.map",
+    "main.de06c17d.js.map": "/marvelous-adventures/static/js/main.de06c17d.js.map",
     "layout.07354f0f.chunk.js.map": "/marvelous-adventures/static/js/layout.07354f0f.chunk.js.map",
     "HomePage.374a6115.chunk.js.map": "/marvelous-adventures/static/js/HomePage.374a6115.chunk.js.map",
     "Characters.ae65376e.chunk.js.map": "/marvelous-adventures/static/js/Characters.ae65376e.chunk.js.map",
@@ -68,6 +68,6 @@
   },
   "entrypoints": [
     "static/css/main.3daebe69.css",
-    "static/js/main.61906484.js"
+    "static/js/main.de06c17d.js"
   ]
 }
