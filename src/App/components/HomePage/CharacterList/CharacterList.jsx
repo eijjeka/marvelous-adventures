@@ -2,9 +2,11 @@ import { useState, useEffect, useContext, useRef } from "react";
 import { SearchContext } from "App/components/Layout/Layout";
 import * as marvelAPI from "App/services/services.js";
 import notFound from "App/assets/images/PlaceHolder.png";
+import { LoaderWrapper } from "App/components/HomePage/RandomCharacters/RandomCharacters.styled";
+import { Dna } from "react-loader-spinner";
 
 import { Container } from "App/shared/Container/Container";
-import { DetailsCharacter } from "../DetailsCharacter";
+import { DetailsCharacter } from "../../DetailsCharacter";
 import {
   Section,
   Title,
@@ -23,6 +25,7 @@ export const CharacterList = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [characters, setCharacters] = useState([]);
   const [findData, setFindData] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (query !== "") {
@@ -42,6 +45,7 @@ export const CharacterList = () => {
       });
 
       setFindData(true);
+      setLoading(false);
     }
   }, [query]);
 
@@ -56,7 +60,19 @@ export const CharacterList = () => {
         <Section ref={sectionRef}>
           <Container value={findData}>
             <Title>Search Characters</Title>
-            {characters && characters.length > 0 ? (
+            {loading ? (
+              <LoaderWrapper>
+                <Dna
+                  visible={true}
+                  height="200"
+                  width="200"
+                  textAlign="center"
+                  ariaLabel="dna-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="dna-wrapper"
+                />
+              </LoaderWrapper>
+            ) : characters && characters.length > 0 ? (
               <List>
                 {characters.map((el) => (
                   <Item key={el.id} onClick={handleClick} id={el.id}>
