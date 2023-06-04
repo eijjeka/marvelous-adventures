@@ -3,6 +3,7 @@ import { Container } from "App/shared/Container/Container";
 import { CustomSelect } from "../../../shared/CustomSelect/CustomSelect";
 
 import { InputSearchByText } from "../../../shared/InputSearchByText/InputSearchByText";
+import { CustomDayPicker } from "./../../../shared/DayPicker/DayPicker";
 import {
   FilterForm,
   WrapperSelect,
@@ -10,6 +11,7 @@ import {
   LabelFormatSelect,
   LabelOderSelect,
   LabelData,
+  WrapperDate,
 } from "./ComicsFilter.styled";
 
 export const ComicsFilter = (second) => {
@@ -25,8 +27,6 @@ export const ComicsFilter = (second) => {
   ];
 
   const optionsSelectOrder = ["Title", "On Sale Date"];
-
-  const fakeOption = ["05/08/2022", "10/12/2022", "23/11/2022"];
 
   return (
     <Section padding="20px 0 80px">
@@ -46,10 +46,10 @@ export const ComicsFilter = (second) => {
               <CustomSelect options={optionsSelectOrder} />
             </LabelOderSelect>
           </WrapperSelect>
-          <LabelData>
-            Start Year
-            <CustomSelect options={fakeOption} />
-          </LabelData>
+          <WrapperDate>
+            <LabelData>Start Year</LabelData>
+            <CustomDayPicker />
+          </WrapperDate>
         </FilterForm>
       </Container>
     </Section>

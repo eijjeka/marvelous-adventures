@@ -55,6 +55,18 @@ export const LabelOderSelect = styled(Label)`
   @media ${(props) => props.theme.media.desktop} {
   }
 `;
+
+export const WrapperDate = styled.div`
+  width: 156px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  @media ${(props) => props.theme.media.tablet} {
+    gap: 8px;
+    width: 149px;
+  }
+`;
+
 export const LabelData = styled(Label)`
   width: 156px;
   @media ${(props) => props.theme.media.tablet} {
