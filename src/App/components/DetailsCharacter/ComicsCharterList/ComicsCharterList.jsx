@@ -39,7 +39,7 @@ export const ComicsCharterList = ({ id }) => {
           ))}
         </List>
       ) : (
-        <h2>Oops... This character don't have comics </h2>
+        <h2>This character don't have comics! </h2>
       )}
     </>
   );

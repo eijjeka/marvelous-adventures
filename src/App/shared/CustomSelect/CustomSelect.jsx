@@ -23,7 +23,7 @@ export const CustomSelect = ({ onSelect, options }) => {
     }
   };
 
-  const handleClickOnSelect = (event) => {
+  const handleClickOnSelect = () => {
     setOptionsIsOpen(!optionsIsOpen);
   };
 
@@ -41,6 +41,10 @@ export const CustomSelect = ({ onSelect, options }) => {
       appRoot.removeEventListener("click", handleClickOutside);
     };
   }, [optionsIsOpen]);
+
+  useEffect(() => {
+    onSelect(currentOption);
+  }, [currentOption]);
 
   return (
     <SelectWrap isOpen={optionsIsOpen}>

@@ -1,0 +1,1 @@
+export { CharactersFilter } from "./CharactersFilter";

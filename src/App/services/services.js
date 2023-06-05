@@ -57,3 +57,22 @@ export const getCharacterByName = async (name) => {
     console.log(error);
   }
 };
+
+export const getCharactersByFilter = async (name, nameComics, order, date) => {
+  try {
+    let url = `characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+
+    if (name) {
+      url += `&nameStartsWith=${name}`;
+    }
+
+    if (order) {
+      url += `&orderBy=${order}`;
+    }
+
+    const response = await axios.get(url);
+    return response.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

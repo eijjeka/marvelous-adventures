@@ -1,0 +1,1 @@
+export { InputSearchByText } from "./InputSearchByText";

@@ -3,6 +3,7 @@ import spider from "App/assets/images/spider-bg.jpg";
 
 export const HeroWrapper = styled.section`
   padding: 220px 0 20px 0;
+
   background-image: url(${spider});
   background-position: 70%;
   background-repeat: no-repeat;

@@ -16,7 +16,7 @@ import {
 } from "./DetailsCharacter.styled";
 
 import icon from "App/assets/images/sprite.svg";
-import { ComicsCharterList } from "../ComicsPage/ComicsCharterList";
+import { ComicsCharterList } from "./ComicsCharterList";
 import { Modal } from "App/components/Modal";
 
 export const DetailsCharacter = ({ setActive, id }) => {
@@ -46,7 +46,11 @@ export const DetailsCharacter = ({ setActive, id }) => {
               <Meta>
                 <Title>{character.name}</Title>
                 <Date>{moment(character.modified).format("MMMM D, YYYY")}</Date>
-                <Description>{character.description}</Description>
+                <Description>
+                  {character.description
+                    ? character.description
+                    : "Oops... This character doesn't have a description, but we're working on it!"}
+                </Description>
                 <ComicsCharterList id={id} />
               </Meta>
             </WrapperCard>
