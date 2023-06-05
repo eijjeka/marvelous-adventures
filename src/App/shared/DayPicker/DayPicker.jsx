@@ -11,17 +11,17 @@ import {
 } from "./DayPicker.styled";
 
 export const CustomDayPicker = ({ options }) => {
-  const date = moment().format("DD/MM/YYYY");
+  const dateNow = moment().format("DD/MM/YYYY");
 
-  const [selectedDay, setSelectedDay] = useState(date);
-  const [optionsIsOpen, setOptionsIsOpen] = useState(false);
+  const [selectedDay, setSelectedDay] = useState(dateNow);
+  const [IsOpen, setIsOpen] = useState(false);
 
   const selectRef = useRef();
   const optionListRef = useRef();
 
   const handleClickOnButton = (e) => {
     console.log("click button");
-    setOptionsIsOpen(!optionsIsOpen);
+    setIsOpen(!IsOpen);
   };
 
   const handleDaySelect = (date) => {
@@ -29,9 +29,9 @@ export const CustomDayPicker = ({ options }) => {
     if (date) {
       setSelectedDay(moment(date).format("DD/MM/YYYY"));
     }
-    setOptionsIsOpen(!optionsIsOpen);
+    setIsOpen(!IsOpen);
   };
-
+  console.log(moment().format("YYYY, MM, DD"));
   return (
     <SelectWrap>
       <Select ref={selectRef} onClick={handleClickOnButton} type="button">
@@ -40,14 +40,13 @@ export const CustomDayPicker = ({ options }) => {
           <use href={icon + "#icon-arrow-select"} />
         </Svg>
       </Select>
-      {optionsIsOpen && (
+      {IsOpen && (
         <WrapDayPicker ref={optionListRef}>
           <StyledDayPicker
             selected={selectedDay}
             onSelect={handleDaySelect}
             mode="single"
-            fromYear={2015}
-            toYear={2025}
+            toDate={new Date(moment().format("YYYY, MM, DD"))}
           />
         </WrapDayPicker>
       )}

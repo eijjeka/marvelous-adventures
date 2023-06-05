@@ -1,31 +1,94 @@
 import { DayPicker } from "react-day-picker";
-// import "node_modules/react-day-picker/src/style.css";
-// import "react-day-picker/lib/style.css";
 import styled from "styled-components";
 
 export const StyledDayPicker = styled(DayPicker)`
-  /* Ваші налаштування стилів */
-  .DayPicker-Day {
-    color: red;
+  .rdp-head_cell {
+    padding: 1px;
+    color: var(--accent-color);
   }
 
-  .DayPicker-Day--selected {
-    /* Стилі для обраного дня */
-    color: red;
+  .rdp-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 
-  .DayPicker-NavButton {
-    /* Стилі для кнопок навігації */
-    background-color: red;
+  .rdp-nav {
+    display: flex;
+    justify-content: space-between;
   }
 
-  /* Додайте інші налаштування стилів за потреби */
+  .rdp-nav_button {
+    padding: 0 5px;
+    color: var(--secondary-text-color);
+    background-color: transparent;
+    border: none;
+    transition: transform 300ms ease, color 300ms ease;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--main-text-color);
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:focus {
+      color: grey;
+      transform: scale(0.8);
+      cursor: not-allowed;
+    }
+  }
+
+  .rdp-nav_button_next {
+    &:hover,
+    &:focus {
+      transform: translateX(3px) scale(1.2);
+    }
+  }
+
+  .rdp-nav_button_previous {
+    &:hover,
+    &:focus {
+      transform: translateX(-3px) scale(1.2);
+    }
+  }
+
+  .rdp-cell {
+    text-align: center;
+  }
+
+  .rdp-day {
+    color: var(--secondary-text-color);
+    background-color: transparent;
+    border: none;
+    transition: transform 300ms ease, color 300ms ease;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--main-text-color);
+      transform: scale(1.5);
+    }
+  }
+
+  .rdp-day_today {
+    width: 100%;
+    color: var(--main-text-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    transform: scale(1.3);
+  }
+
+  .rdp-day_disabled,
+  .rdp-day_disabled:hover {
+    color: gray;
+    transform: scale(0.7);
+  }
 `;
 
 export const SelectWrap = styled.div`
   position: relative;
-  /* visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
-  visibility: visible; */
 `;
 
 export const Select = styled.button`
@@ -64,13 +127,9 @@ export const WrapDayPicker = styled.div`
   background-color: #171717;
   border-radius: 16px;
   list-style: none;
-  /* pointer-events: ${({ isOpen }) => (isOpen ? "visible" : "none")};
-  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
-  transform: ${({ isOpen }) => (isOpen ? "opacity(1)" : "opacity(0)")}; */
 
   @media ${(props) => props.theme.media.tablet} {
-    /* font-size: 16px;
-    line-height: 1.12; */
+    right: 0;
   }
   @media ${(props) => props.theme.media.desktop} {
   }
