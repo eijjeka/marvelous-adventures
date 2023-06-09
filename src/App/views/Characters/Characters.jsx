@@ -4,7 +4,7 @@ import { CharactersFilter } from "App/components/CharactersPage/CharactersFilter
 import { SectionCharactersByFilter } from "App/components/CharactersPage/SectionCharactersByFilter";
 import { useEffect } from "react";
 
-const Characters = () => {
+export const Characters = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,5 +17,3 @@ const Characters = () => {
     </CharactersProvider>
   );
 };
-
-export default Characters;
