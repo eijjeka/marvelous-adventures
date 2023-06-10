@@ -3,6 +3,7 @@ import { Container } from "App/shared/Container/Container";
 import { CustomSelect } from "App/shared/CustomSelect/CustomSelect";
 import { InputSearchByText } from "../../../shared/InputSearchByText/InputSearchByText";
 import { CustomDayPicker } from "./../../../shared/DayPicker/DayPicker";
+import { useState } from "react";
 import {
   FilterForm,
   WrapperSelect,
@@ -14,6 +15,11 @@ import {
 } from "./ComicsFilter.styled";
 
 export const ComicsFilter = (second) => {
+  const [title, setTitle] = useState();
+  const [format, setFormat] = useState();
+  const [order, setOrder] = useState();
+  const [date, setDate] = useState();
+
   const optionsSelectFormat = [
     "Comic",
     "Magazine",
@@ -33,21 +39,27 @@ export const ComicsFilter = (second) => {
         <FilterForm>
           <LabelSearch>
             Title Starts With
-            <InputSearchByText placeholder="Enter text" />
+            <InputSearchByText
+              getStateByInput={setTitle}
+              placeholder="Enter text"
+            />
           </LabelSearch>
           <WrapperSelect>
             <LabelFormatSelect>
               Format
-              <CustomSelect options={optionsSelectFormat} />
+              <CustomSelect
+                onSelect={setFormat}
+                options={optionsSelectFormat}
+              />
             </LabelFormatSelect>
             <LabelOderSelect>
               Order by
-              <CustomSelect options={optionsSelectOrder} />
+              <CustomSelect onSelect={setOrder} options={optionsSelectOrder} />
             </LabelOderSelect>
           </WrapperSelect>
           <WrapperDate>
             <LabelData>Start Year</LabelData>
-            <CustomDayPicker />
+            <CustomDayPicker setDate={setDate} />
           </WrapperDate>
         </FilterForm>
       </Container>
