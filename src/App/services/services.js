@@ -70,6 +70,10 @@ export const getCharactersByFilter = async (name, nameComics, order, date) => {
       url += `&orderBy=${order}`;
     }
 
+    if (date) {
+      url += `&modifiedSince=${date}`;
+    }
+    console.log("getCharacters", date);
     const response = await axios.get(url);
     return response.data.data;
   } catch (error) {

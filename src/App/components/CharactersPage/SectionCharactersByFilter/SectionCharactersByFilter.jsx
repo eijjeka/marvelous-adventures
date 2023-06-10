@@ -23,6 +23,7 @@ export const SectionCharactersByFilter = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("useEffect", date);
     marvelAPI
       .getCharactersByFilter(name, nameComics, order, date)
       .then((data) => {

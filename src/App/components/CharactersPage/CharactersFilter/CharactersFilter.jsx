@@ -11,6 +11,7 @@ import { Container } from "App/shared/Container/Container";
 import { CustomSelect } from "App/shared/CustomSelect/CustomSelect";
 import { useContext } from "react";
 import { CharactersContext } from "App/views/Characters/CharactersContext";
+import { CustomDayPicker } from "App/shared/DayPicker/DayPicker";
 
 const data = ["modified", "name"];
 
@@ -52,7 +53,7 @@ export const CharactersFilter = () => {
           </LabelOrderBy>
           <LabelDate>
             Date
-            <CustomSelect onSelect={setDate} options={date} />
+            <CustomDayPicker setDate={setDate} />
           </LabelDate>
         </CustomSelectWrapper>
       </FilterForm>

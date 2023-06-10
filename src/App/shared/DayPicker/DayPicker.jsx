@@ -10,28 +10,25 @@ import {
   Svg,
 } from "./DayPicker.styled";
 
-export const CustomDayPicker = ({ options }) => {
+export const CustomDayPicker = ({ setDate }) => {
   const dateNow = moment().format("DD/MM/YYYY");
 
   const [selectedDay, setSelectedDay] = useState(dateNow);
   const [IsOpen, setIsOpen] = useState(false);
-
   const selectRef = useRef();
   const optionListRef = useRef();
 
   const handleClickOnButton = (e) => {
-    console.log("click button");
     setIsOpen(!IsOpen);
   };
 
   const handleDaySelect = (date) => {
-    console.log("click DATE");
     if (date) {
+      setDate(moment(date).format("YYYY-MM-DD"));
       setSelectedDay(moment(date).format("DD/MM/YYYY"));
     }
     setIsOpen(!IsOpen);
   };
-  console.log(moment().format("YYYY, MM, DD"));
   return (
     <SelectWrap>
       <Select ref={selectRef} onClick={handleClickOnButton} type="button">
