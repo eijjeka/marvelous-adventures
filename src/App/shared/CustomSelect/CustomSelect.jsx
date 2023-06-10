@@ -44,7 +44,7 @@ export const CustomSelect = ({ onSelect, options }) => {
 
   useEffect(() => {
     onSelect(currentOption);
-  }, [currentOption]);
+  }, [currentOption, onSelect]);
 
   return (
     <SelectWrap isOpen={optionsIsOpen}>

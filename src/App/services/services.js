@@ -80,3 +80,29 @@ export const getCharactersByFilter = async (name, nameComics, order, date) => {
     console.log(error);
   }
 };
+
+export const getComicsByFilter = async (title, format, order, startYear) => {
+  try {
+    let url = `comics?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+
+    if (title) {
+      url += `&titleStartsWith=${title}`;
+    }
+
+    if (format) {
+      url += `&format=${format}`;
+    }
+
+    if (order) {
+      url += `&orderBy=${order}`;
+    }
+
+    if (startYear) {
+      url += `&startYear=${startYear}`;
+    }
+    const response = await axios.get(url);
+    return response.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

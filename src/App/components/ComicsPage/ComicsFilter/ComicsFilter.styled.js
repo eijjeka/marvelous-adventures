@@ -8,6 +8,7 @@ export const FilterForm = styled.form`
   }
   @media ${(props) => props.theme.media.tablet} {
     flex-direction: row;
+    justify-content: center;
   }
   @media ${(props) => props.theme.media.desktop} {
   }
