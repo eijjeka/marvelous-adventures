@@ -3,6 +3,7 @@ import { Container } from "App/shared/Container/Container";
 import { CustomSelect } from "App/shared/CustomSelect/CustomSelect";
 import { InputSearchByText } from "../../../shared/InputSearchByText/InputSearchByText";
 import { CustomDayPicker } from "./../../../shared/DayPicker/DayPicker";
+import { PlaceholderNothingFound } from "./../../../shared/PlaceholderNothingFound/PlaceholderNothingFound";
 import { getComicsByFilter } from "App/services/services.js";
 import { useState, useEffect } from "react";
 import { ComicsCardList } from "App/components/ComicsPage/ComicsList/ComicsList";
@@ -77,7 +78,7 @@ export const ComicsFilter = (second) => {
             <CustomDayPicker setDate={setDate} />
           </WrapperDate>
         </FilterForm>
-        {Data && <ComicsCardList data={Data} />}
+        {Data ? <ComicsCardList data={Data} /> : <PlaceholderNothingFound />}
       </Container>
     </Section>
   );

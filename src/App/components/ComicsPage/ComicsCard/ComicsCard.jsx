@@ -7,7 +7,7 @@ import {
   Author,
 } from "./ComicsCard.styled";
 
-export const ComicsCard = ({ data: { thumbnail, title } }) => {
+export const ComicsCard = ({ data: { thumbnail, title, id } }) => {
   console.log("images: ", thumbnail);
 
   return (
@@ -17,7 +17,7 @@ export const ComicsCard = ({ data: { thumbnail, title } }) => {
       </InnerImage>
       <InnerDescription>
         <Name>{title}</Name>
-        <Author></Author>
+        <Author>{id}</Author>
       </InnerDescription>
     </Wrapper>
   );
