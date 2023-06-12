@@ -5,17 +5,19 @@ import {
   InnerDescription,
   Name,
   Author,
-} from "../../../shared/Wrapper/Wrapper";
+} from "./ComicsCard.styled";
 
-export const ComicsCard = ({ path, name, author }) => {
+export const ComicsCard = ({ data: { thumbnail, title, id } }) => {
+  console.log("images: ", thumbnail);
+
   return (
     <Wrapper>
       <InnerImage>
-        <Image src={path} />
+        <Image src={`${thumbnail.path}.${thumbnail.extension}`} />
       </InnerImage>
       <InnerDescription>
-        <Name>{name}</Name>
-        <Author>{author}</Author>
+        <Name>{title}</Name>
+        <Author>{id}</Author>
       </InnerDescription>
     </Wrapper>
   );

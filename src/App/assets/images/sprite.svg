@@ -1,6 +1,12 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
+        <symbol id="icon-svg-for-placeholder" viewBox="0 0 57 32">
+            <path fill="none" stroke="#34387f" style="stroke: var(--color1, #34387f)" stroke-linejoin="round"
+                stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.6244"
+                d="M11.192 2.939c3.789 3.941-2.537 7.527-6.36 6.161 1.453 1.249 1.117 6.013-4.461 5.936 5.581 1.623 4.686 6.739 2.473 9.318 4.463-2.319 9.609 0.768 9.332 4.727 1.864-3.261 11.141-2.18 11.716 1.906 1.808-1.617 11.277-2.73 12.863 0.628 1.35-2.48 7.293-4.187 11.18-0.939-0.007-3.909 2.026-7.274 8.646-7.182-5.817-2.997-4.955-11.054-0.958-12.378-4.812 1.024-8.423-3.781-6.562-7.77-2.333 3.076-10.76 3.325-12.78-0.894-2.083 2.153-8.339 0.542-9.072-2.059 0.174 2.141-2.891 3.151-5.808 1.852-0.827 4.034-9.072 3.644-10.209 0.695z">
+            </path>
+        </symbol>
         <symbol id="icon-arrow-blue" viewBox="0 0 32 32">
             <path fill="#34387f" style="fill: var(--color1, #34387f); stroke: var(--color1, #34387f)" stroke="#34387f"
                 stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.4706"

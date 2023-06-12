@@ -4,10 +4,12 @@ export const FilterForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 40px;
   @media ${(props) => props.theme.media.phone} {
   }
   @media ${(props) => props.theme.media.tablet} {
     flex-direction: row;
+    justify-content: center;
   }
   @media ${(props) => props.theme.media.desktop} {
   }
