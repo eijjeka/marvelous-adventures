@@ -5,13 +5,10 @@ export const FilterForm = styled.form`
   flex-direction: column;
   gap: 12px;
   margin-bottom: 40px;
-  @media ${(props) => props.theme.media.phone} {
-  }
+
   @media ${(props) => props.theme.media.tablet} {
     flex-direction: row;
     justify-content: center;
-  }
-  @media ${(props) => props.theme.media.desktop} {
   }
 `;
 
@@ -30,15 +27,11 @@ export const Label = styled.label`
     font-size: 14px;
     line-height: 1.29;
   }
-  @media ${(props) => props.theme.media.desktop} {
-  }
 `;
 
 export const LabelSearch = styled(Label)`
   @media ${(props) => props.theme.media.tablet} {
     width: 197px;
-  }
-  @media ${(props) => props.theme.media.desktop} {
   }
 `;
 
@@ -46,15 +39,11 @@ export const LabelFormatSelect = styled(Label)`
   @media ${(props) => props.theme.media.tablet} {
     width: 169px;
   }
-  @media ${(props) => props.theme.media.desktop} {
-  }
 `;
 
 export const LabelOderSelect = styled(Label)`
   @media ${(props) => props.theme.media.tablet} {
     width: 149px;
-  }
-  @media ${(props) => props.theme.media.desktop} {
   }
 `;
 
@@ -63,23 +52,22 @@ export const WrapperDate = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
+
   @media ${(props) => props.theme.media.tablet} {
-    gap: 8px;
     width: 149px;
+    gap: 8px;
   }
 `;
 
 export const LabelData = styled(Label)`
   width: 156px;
+
   @media ${(props) => props.theme.media.tablet} {
     width: 149px;
-  }
-  @media ${(props) => props.theme.media.desktop} {
   }
 `;
 
 export const WrapperSelect = styled.div`
   display: flex;
-
   gap: 8px;
 `;

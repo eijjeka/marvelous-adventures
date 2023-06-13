@@ -12,7 +12,6 @@ export const ComicsHeroSection = styled(Section)`
 
   @media ${(props) => props.theme.media.phone} {
     background-image: url(${getPathImg("comics-bg-tab")});
-    /* background-size: contain; */
   }
 
   @media ${(props) => props.theme.media.tablet} {
@@ -20,7 +19,6 @@ export const ComicsHeroSection = styled(Section)`
     padding-bottom: 32px;
     background-image: url(${getPathImg("comics-bg")});
     background-size: cover;
-
     background-position: left;
   }
 
@@ -28,9 +26,8 @@ export const ComicsHeroSection = styled(Section)`
     max-width: 1440px;
     margin: 0 auto;
     padding-bottom: 64px;
-
-    background-position: right;
     background-size: auto;
+    background-position: right;
   }
 `;
 
@@ -38,9 +35,7 @@ export const SubTitle = styled.p`
   margin-bottom: 14px;
   font-size: 14px;
   line-height: 1.29;
-
   text-transform: uppercase;
-
   color: rgba(255, 255, 255, 0.7);
 
   @media ${(props) => props.theme.media.tablet} {
