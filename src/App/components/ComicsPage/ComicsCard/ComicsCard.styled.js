@@ -43,10 +43,6 @@ export const Image = styled.img`
 export const InnerDescription = styled.div`
   padding: 16px 0 8px;
   flex-grow: 1;
-  @media ${(props) => props.theme.media.tablet} {
-  }
-  @media ${(props) => props.theme.media.desktop} {
-  }
 `;
 
 export const Name = styled.h3`
@@ -63,8 +59,6 @@ export const Name = styled.h3`
     font-size: 24px;
     line-height: 1;
   }
-  @media ${(props) => props.theme.media.desktop} {
-  }
 `;
 
 export const Author = styled.p`
@@ -75,7 +69,5 @@ export const Author = styled.p`
   @media ${(props) => props.theme.media.tablet} {
     font-size: 16px;
     line-height: 1.12;
-  }
-  @media ${(props) => props.theme.media.desktop} {
   }
 `;

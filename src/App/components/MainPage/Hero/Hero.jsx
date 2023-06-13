@@ -1,13 +1,11 @@
+import { useEffect, useState } from "react";
 import { Container } from "App/shared/Container/Container";
 import { HeroSection } from "App/components/MainPage/Hero/Hero.styled";
 import { HeroItem } from "./HeroItem";
 import heros from "App/assets/data/hero.json";
-import { useEffect, useState } from "react";
-console.log("heros: ", heros);
 
 export const Hero = () => {
   const [currentHero, setCurrentHero] = useState(heros[0]);
-  // console.log('currentHero: ', currentHero);
 
   useEffect(() => {
     const timerPagination = setInterval(() => {
@@ -22,7 +20,6 @@ export const Hero = () => {
     }, 3500);
 
     return () => {
-      console.log("UNMOUNT");
       clearInterval(timerPagination);
     };
   }, []);

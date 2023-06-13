@@ -22,7 +22,7 @@ const PaginationList = styled.ul`
     width: auto;
 
     right: 768px;
-    bottom: -41px;
+    bottom: -9px;
   }
 `;
 const PaginationItem = styled.li``;

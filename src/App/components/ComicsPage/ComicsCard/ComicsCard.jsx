@@ -8,8 +8,6 @@ import {
 } from "./ComicsCard.styled";
 
 export const ComicsCard = ({ data: { thumbnail, title, id } }) => {
-  console.log("images: ", thumbnail);
-
   return (
     <Wrapper>
       <InnerImage>

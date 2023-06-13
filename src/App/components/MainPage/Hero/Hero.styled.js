@@ -23,8 +23,6 @@ export const HeroSection = styled(Section)`
     @media ${(props) => props.theme.media.desktop} {
       display: flex;
     }
-    @media ${(props) => props.theme.media.desktop} {
-    }
   }
   p {
     margin-bottom: 20px;
@@ -72,8 +70,6 @@ export const HeroSection = styled(Section)`
     @media ${(props) => props.theme.media.tablet} {
       width: 195px;
     }
-    @media ${(props) => props.theme.media.desktop} {
-    }
   }
 `;
 
@@ -87,6 +83,7 @@ export const SubTitle = styled.p`
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.29;
+
   @media ${(props) => props.theme.media.tablet} {
     font-size: 18px;
     line-height: 1.6;
@@ -100,9 +97,11 @@ export const MainTitle = styled.h1`
   font-size: 44px;
   line-height: 1;
   letter-spacing: -0.02em;
+
   @media ${(props) => props.theme.media.tablet} {
     font-size: 80px;
   }
+
   @media ${(props) => props.theme.media.desktop} {
     width: 538px;
   }
@@ -110,6 +109,7 @@ export const MainTitle = styled.h1`
 
 export const StyledWrapperBtn = styled.div`
   margin-bottom: 40px;
+
   @media ${(props) => props.theme.media.tablet} {
     margin-bottom: 32px;
   }
@@ -129,7 +129,7 @@ export const WrapperImages = styled.div`
   @media ${(props) => props.theme.media.desktop} {
     position: absolute;
     right: 0;
-    top: -146px;
+    top: -210px;
   }
 `;
 
@@ -151,8 +151,6 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   gap: 55px;
 
-  @media ${(props) => props.theme.media.tablet} {
-  }
   @media ${(props) => props.theme.media.desktop} {
     gap: 68px;
   }
@@ -162,15 +160,14 @@ export const StyledWrapperImg = styled.div`
   position: relative;
   z-index: 2;
   align-self: flex-end;
-  /* width: 237px; */
   margin-top: 20px;
+
   @media ${(props) => props.theme.media.tablet} {
-    /* width: 336px; */
     margin-top: 0;
   }
+
   @media ${(props) => props.theme.media.desktop} {
-    padding-bottom: 96px;
-    /* width: 352px; */
+    padding-bottom: 78px;
   }
 `;
 
@@ -185,22 +182,19 @@ export const StyledHeroButton = styled.button`
   border-radius: 50%;
   font-family: inherit;
   text-transform: uppercase;
+  background-image: ${(colors) => colors.gradientBtn};
   color: inherit;
   cursor: pointer;
   transition: transform 300ms linear, box-shadow 300ms linear;
   &:hover,
   &:focus {
     transform: scale(1.2);
+    box-shadow: 0 0 15px 5px ${(colors) => colors.main};
   }
   @media ${(props) => props.theme.media.tablet} {
     width: 144px;
     height: 144px;
     top: 380px;
-  }
-  background-image: ${(colors) => colors.gradientBtn};
-  &:hover,
-  &:focus {
-    box-shadow: 0 0 15px 5px ${(colors) => colors.main};
   }
 `;
 
@@ -213,12 +207,13 @@ export const StyledGradientBg = styled.div`
   height: 234px;
   filter: blur(47px);
   border-radius: 200000px;
+  background-image: ${({ colorBg }) => colorBg};
+
   @media ${(props) => props.theme.media.tablet} {
     width: 332px;
     height: 300px;
     bottom: 0;
   }
-  background-image: ${({ colorBg }) => colorBg};
 `;
 
 export const ColorButton = styled(Button)`
@@ -226,6 +221,7 @@ export const ColorButton = styled(Button)`
   transition-property: transform, color, background-color, border, box-shadow;
   transition-duration: 300ms;
   transition-timing-function: linear;
+
   &:hover,
   &:focus {
     color: ${({ colorBg }) => colorBg};

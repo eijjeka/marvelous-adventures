@@ -1,5 +1,8 @@
+import styled from "styled-components";
+import getPathImg from "App/services/getPathStaticImg";
 import { Button } from "App/shared/Button/Button";
 import { HeroButton } from "./HeroButton";
+import { PaginationHeroPage } from "./PaginationHeroPage";
 
 import {
   StyledWrapperImg,
@@ -13,10 +16,6 @@ import {
   DescriptionWrapper,
   WrapperImages,
 } from "./Hero.styled";
-
-import getPathImg from "App/services/getPathStaticImg";
-import styled from "styled-components";
-import { PaginationHeroPage } from "./PaginationHeroPage";
 
 const Item = styled.div``;
 
