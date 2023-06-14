@@ -15,7 +15,7 @@ export const Wrapper = styled.li`
 
 export const InnerImage = styled.div`
   max-width: 335px;
-  height: 468px;
+  height: 445px;
   border-radius: 8px;
   overflow: hidden;
 
@@ -32,7 +32,7 @@ export const Image = styled.img`
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 
   @media ${(props) => props.theme.media.tablet} {
   }

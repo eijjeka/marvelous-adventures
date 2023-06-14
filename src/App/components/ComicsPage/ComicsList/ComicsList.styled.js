@@ -9,7 +9,6 @@ export const ComicsList = styled.ul`
   font-weight: 500;
   font-size: 60px;
   line-height: 1;
-  letter-spacing: -0.02em;
   color: var(--main-text-color);
 
   @media ${(props) => props.theme.media.tablet} {

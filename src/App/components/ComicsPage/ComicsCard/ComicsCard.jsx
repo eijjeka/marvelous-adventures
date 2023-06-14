@@ -7,7 +7,7 @@ import {
   Author,
 } from "./ComicsCard.styled";
 
-export const ComicsCard = ({ data: { thumbnail, title, id } }) => {
+export const ComicsCard = ({ data: { thumbnail, title, creators } }) => {
   return (
     <Wrapper>
       <InnerImage>
@@ -15,7 +15,7 @@ export const ComicsCard = ({ data: { thumbnail, title, id } }) => {
       </InnerImage>
       <InnerDescription>
         <Name>{title}</Name>
-        <Author>{id}</Author>
+        <Author>{creators?.items[0]?.name || "marvel"}</Author>
       </InnerDescription>
     </Wrapper>
   );
