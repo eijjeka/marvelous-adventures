@@ -2,7 +2,7 @@
   "name": "marvelous-adventures",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eijjeka.github.io/marvelous-adventures/",
+  "homepage": "https://eijjeka.github.io/marvelous-adventures",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
