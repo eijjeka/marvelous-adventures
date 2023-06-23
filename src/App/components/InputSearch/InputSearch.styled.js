@@ -60,28 +60,37 @@ export const Button = styled.button`
   }
 `;
 
-export const SearchListContanier = styled.div`
+export const SearchListContainer = styled.div`
   position: absolute;
   width: 100%;
 
   color: #fff;
-  background-color: #000000;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  background-color: #181818;
+  border-radius: 8px;
 `;
 
 export const SearchList = styled.ul`
   list-style: none;
-  max-height: ${({ count }) => (count > 10 ? "200px" : "")};
+  max-height: ${({ count }) => (count > 5 ? "200px" : "")};
   overflow-y: ${({ count }) => (count > 0 ? "scroll" : "")};
+
+  ::-webkit-scrollbar {
+    background-color: #000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #34387f;
+    border-radius: 20px;
+    border: 1px solid #bebebe;
+  }
 `;
 
 export const SearchListItem = styled.li`
   margin-bottom: 10px;
   cursor: pointer;
   text-align: center;
+  transition: color 250ms ease-in-out;
 
   :hover {
-    background-color: #181819;
+    color: #34387f;
   }
 `;

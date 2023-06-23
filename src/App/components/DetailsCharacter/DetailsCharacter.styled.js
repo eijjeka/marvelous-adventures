@@ -12,10 +12,10 @@ export const CloseBtn = styled.button`
   width: 20px;
   height: 20px;
 
-  cursor: pointer;
   border: none;
   outline: none;
   background: transparent;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     top: 5px;
