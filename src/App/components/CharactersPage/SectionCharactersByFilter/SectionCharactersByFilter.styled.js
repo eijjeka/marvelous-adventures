@@ -25,6 +25,22 @@ export const Item = styled.li`
   transition: transform 250ms ease-in-out;
   cursor: pointer;
 
+  width: 332px;
+  height: 445px;
+  margin-bottom: 40px;
+
+  @media ${(props) => props.theme.media.tablet} {
+    width: 336px;
+    height: 450px;
+    margin-bottom: 32px;
+  }
+
+  @media ${(props) => props.theme.media.desktop} {
+    width: 332px;
+    height: 445px;
+    margin-bottom: 64px;
+  }
+
   :hover {
     transform: scale(1.02);
   }
@@ -32,8 +48,8 @@ export const Item = styled.li`
 
 export const CardImg = styled.img`
   display: block;
-  width: 332px;
-  height: 445px;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   margin-bottom: 16px;
 `;

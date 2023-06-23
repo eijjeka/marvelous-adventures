@@ -26,13 +26,17 @@ export const DetailsCharacter = ({ setActive, id }) => {
     marvelAPI.getCharacterById(id).then((data) => setCharacter(...data));
     // eslint-disable-next-line
   }, []);
-  console.log("!!!!!!!", character.modified);
+
   return (
     <>
       {character && (
         <Modal setActive={setActive}>
           <Container>
-            <CloseBtn onClick={() => setActive(false)}>
+            <CloseBtn
+              onClick={() => {
+                setActive(false);
+              }}
+            >
               <Svg>
                 <use href={icon + "#icon-close"} />
               </Svg>

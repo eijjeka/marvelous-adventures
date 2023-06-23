@@ -15,15 +15,6 @@ import { CustomDayPicker } from "App/shared/DayPicker/DayPicker";
 
 const data = ["modified", "name"];
 
-const date = [
-  "27/02/2021",
-  "27/03/2021",
-  "27/2/2021",
-  "7/02/2021",
-  "22/02/2021",
-  "27/02/2090",
-];
-
 export const CharactersFilter = () => {
   const { setName, setNameComics, setDate, setOrder } =
     useContext(CharactersContext);

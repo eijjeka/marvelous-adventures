@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { SearchContext } from "../Layout/Layout";
 import * as marvelAPI from "App/services/services.js";
+import { useNavigate } from "react-router-dom";
 
 import {
   Form,
@@ -8,7 +9,7 @@ import {
   Input,
   Button,
   Svg,
-  SearchListContanier,
+  SearchListContainer,
   SearchList,
   SearchListItem,
 } from "./InputSearch.styled";
@@ -18,6 +19,7 @@ export const InputSearch = ({ placeholder }) => {
   const { updateQuery } = useContext(SearchContext);
   const [searchData, setSearchData] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getData = setTimeout(() => {
@@ -36,12 +38,14 @@ export const InputSearch = ({ placeholder }) => {
     const name = inputValue.trim();
     updateQuery(name);
     setInputValue("");
+    navigate("/");
   };
 
   const handleClickItem = (name) => {
     updateQuery(name);
     setInputValue(name);
     setInputValue("");
+    navigate("/");
   };
 
   return (
@@ -59,7 +63,7 @@ export const InputSearch = ({ placeholder }) => {
         />
       </Container>
       {searchData && searchData.length > 0 && (
-        <SearchListContanier count={searchData.length}>
+        <SearchListContainer count={searchData.length}>
           <SearchList count={searchData.length}>
             {searchData.map((el) => (
               <SearchListItem
@@ -70,7 +74,7 @@ export const InputSearch = ({ placeholder }) => {
               </SearchListItem>
             ))}
           </SearchList>
-        </SearchListContanier>
+        </SearchListContainer>
       )}
     </Form>
   );
