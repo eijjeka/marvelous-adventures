@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { Overlay, Wrapper } from "./Modal.styled";
+import { Backdrop, Wrapper } from "./Modal.styled";
 import { useRef } from "react";
 
 export const Modal = ({ setActive, children }) => {
@@ -12,9 +12,9 @@ export const Modal = ({ setActive, children }) => {
   };
 
   return createPortal(
-    <Overlay onClick={(e) => handleOverlay(e)}>
-      <Wrapper ref={overlay}>{children}</Wrapper>
-    </Overlay>,
+    <Backdrop ref={overlay} onClick={(e) => handleOverlay(e)}>
+      {children}
+    </Backdrop>,
     document.getElementById("portal")
   );
 };

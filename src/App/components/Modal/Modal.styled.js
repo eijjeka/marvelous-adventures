@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Overlay = styled.div`
+export const Backdrop = styled.div`
   position: fixed;
   top: 0;
   left: 0;
