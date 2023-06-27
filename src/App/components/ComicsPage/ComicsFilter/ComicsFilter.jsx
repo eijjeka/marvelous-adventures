@@ -7,6 +7,7 @@ import { PlaceholderNothingFound } from "./../../../shared/PlaceholderNothingFou
 import { getComicsByFilter } from "App/services/services.js";
 import { useState, useEffect } from "react";
 import { ComicsCardList } from "App/components/ComicsPage/ComicsList/ComicsList";
+import { ComicsModal } from "./../ComicsModal/ComicsModal";
 import {
   FilterForm,
   WrapperSelect,
@@ -18,11 +19,14 @@ import {
 } from "./ComicsFilter.styled";
 
 export const ComicsFilter = (second) => {
-  const [Data, setData] = useState();
-  const [title, setTitle] = useState();
-  const [format, setFormat] = useState();
-  const [order, setOrder] = useState();
-  const [date, setDate] = useState();
+  const [Data, setData] = useState(null);
+  const [idCurrentCard, setIdCurrentCard] = useState("");
+  const [title, setTitle] = useState("");
+  const [format, setFormat] = useState("");
+  const [order, setOrder] = useState("");
+  const [date, setDate] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  console.log("idCurrentCard: ", idCurrentCard);
 
   useEffect(() => {
     console.log(order);
@@ -78,7 +82,18 @@ export const ComicsFilter = (second) => {
             <CustomDayPicker setDate={setDate} />
           </WrapperDate>
         </FilterForm>
-        {Data ? <ComicsCardList data={Data} /> : <PlaceholderNothingFound />}
+        {Data ? (
+          <ComicsCardList
+            data={Data}
+            setIdCurrentCard={setIdCurrentCard}
+            setModalIsOpen={setModalIsOpen}
+          />
+        ) : (
+          <PlaceholderNothingFound />
+        )}
+        {modalIsOpen && (
+          <ComicsModal id={idCurrentCard} setActive={setModalIsOpen} />
+        )}
       </Container>
     </Section>
   );

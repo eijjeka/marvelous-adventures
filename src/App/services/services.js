@@ -106,3 +106,10 @@ export const getComicsByFilter = async (title, format, order, startYear) => {
     console.log(error);
   }
 };
+
+export const getComicsById = async (comicsId) => {
+  const response = await axios.get(
+    `/comics/${comicsId}?ts=${ts}&apikey=${publicKey}&hash=${hash}`
+  );
+  return response.data.data.results[0];
+};

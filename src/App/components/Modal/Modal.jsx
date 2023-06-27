@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { Backdrop, Wrapper } from "./Modal.styled";
+import { Backdrop } from "./Modal.styled";
 import { useRef } from "react";
 
 export const Modal = ({ setActive, children }) => {
