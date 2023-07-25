@@ -24,7 +24,7 @@ export const CustomDayPicker = ({ setDate }) => {
 
   const handleDaySelect = (date) => {
     if (date) {
-      setDate(moment(date).format("YYYY-MM-DD"));
+      setDate(moment(date).format("YYYY"));
       setSelectedDay(moment(date).format("DD/MM/YYYY"));
     }
     setIsOpen(!IsOpen);

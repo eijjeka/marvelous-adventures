@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import moment from "moment";
 import icon from "App/assets/images/sprite.svg";
 import * as API from "App/services/services";
 import { Modal } from "App/components/Modal";
@@ -8,58 +9,51 @@ import {
   ModalWrapper,
   CloseBtn,
   Svg,
-  WrapperImages,
   InnerMainImg,
   MainImg,
   DescriptionWrapper,
   Name,
+  WrapForAuthorAndModified,
+  Author,
+  ModifiedDate,
+  Description,
+  DetailsList,
 } from "./ComicsModal.styled";
 
 export const ComicsModal = ({ id, setActive }) => {
   const [comics, setComics] = useState(null);
+  const [imgIsLoad, setImgIsLoad] = useState(false);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
-      const comics = API.getComicsById(id);
-      console.log("comics: ", comics);
-      const charters = API.getComicsCharactersById(id);
-      console.log("charters: ", charters);
-      const creators = API.getComicsCreatorsById(id);
-      console.log("creators: ", creators);
-
-      const data = await Promise.all([comics, charters, creators]);
-      console.log("data: ", data);
-
+      const data = await API.getComicsById(id);
+      setComics(data);
       return data;
     };
 
     getData()
-      .then((data) => console.log("data: ", data))
-      .catch(console.error)
+      .then((data) =>
+        console.log("modified: ", moment(data.modified).format("MMMM DD YYYY"))
+      )
+      .catch(() => {
+        setLoading(false);
+        setError(true);
+      })
       .finally(() => setLoading(false));
-    // API.getComicsById(id).then((data) => {
-    //   console.dir(data);
-    //   setComics(data);
-    //   setLoading(false);
-    // });
   }, [id]);
 
   const normalizeTitle = (title) => {
     const startIndexForRemove = title.indexOf("#");
     return title.substring(0, startIndexForRemove);
   };
-  // useEffect(() => {
-  //   if (comics.length === 0) {
-  //     setError(true);
-  //   } else {
-  //     setError(false);
-  //   }
-  // }, [comics]);
-  // useEffect(() => {
-  //   const data = API.getComicsById(id).then(console.log);
-  // });
+
+  const handleImageLoad = () => {
+    setImgIsLoad(true);
+  };
+
   return (
     <Modal setActive={setActive}>
       {loading && <MainLoader />}
@@ -70,16 +64,30 @@ export const ComicsModal = ({ id, setActive }) => {
               <use href={icon + "#icon-close"} />
             </Svg>
           </CloseBtn>
-          <WrapperImages>
-            <InnerMainImg>
-              <MainImg
-                src={`${comics.thumbnail.path}.${comics.thumbnail.extension}`}
-              />
-            </InnerMainImg>
-          </WrapperImages>
-          <DescriptionWrapper>
-            <Name>{normalizeTitle(comics.title)}</Name>
-          </DescriptionWrapper>
+          {/* <WrapperImages> */}
+          <InnerMainImg>
+            <MainImg
+              onLoad={handleImageLoad}
+              src={`${comics.thumbnail.path}.${comics.thumbnail.extension}`}
+            />
+          </InnerMainImg>
+          {/* </WrapperImages> */}
+          {imgIsLoad && (
+            <>
+              <DescriptionWrapper>
+                <Name>{normalizeTitle(comics.title)}</Name>
+                <WrapForAuthorAndModified>
+                  <Author>{comics.creators?.items[0]?.name || "Author"}</Author>
+                  <ModifiedDate>
+                    {moment(comics.modified).format("MMMM DD YYYY")}
+                  </ModifiedDate>
+                </WrapForAuthorAndModified>
+                <Description>{comics.description}</Description>
+              </DescriptionWrapper>
+
+              <DetailsList></DetailsList>
+            </>
+          )}
         </ModalWrapper>
       )}
     </Modal>

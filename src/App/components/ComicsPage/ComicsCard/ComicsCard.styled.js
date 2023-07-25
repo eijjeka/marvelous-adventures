@@ -4,6 +4,8 @@ export const Wrapper = styled.li`
   display: flex;
   flex-direction: column;
   width: 100%;
+  cursor: pointer;
+
   @media ${(props) => props.theme.media.tablet} {
     width: calc((100% - 32px) / 2);
   }

@@ -23,7 +23,7 @@ export const ComicsFilter = (second) => {
   const [idCurrentCard, setIdCurrentCard] = useState("");
   const [title, setTitle] = useState("");
   const [format, setFormat] = useState("");
-  const [order, setOrder] = useState("");
+  const [order, setOrder] = useState("Title");
   const [date, setDate] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   console.log("idCurrentCard: ", idCurrentCard);
