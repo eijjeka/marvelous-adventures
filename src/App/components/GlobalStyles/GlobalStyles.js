@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
   --main-text-color: #FAFAFA;
   --secondary-text-color: rgba(255, 255, 255, 0.7);
   --main-bg-color: #0C0B0B;
+  --secondary-bg-color: #171717;
   --panther-color: #34387F;
   --spider-color: #600404;
   --hulk-color: #5B7F3C;

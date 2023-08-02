@@ -1,9 +1,17 @@
 import { createPortal } from "react-dom";
-import { Backdrop, Wrapper } from "./Modal.styled";
+import { useEffect } from "react";
+import { Backdrop } from "./Modal.styled";
 import { useRef } from "react";
 
 export const Modal = ({ setActive, children }) => {
   const overlay = useRef();
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   const handleOverlay = (e) => {
     if (e.target === overlay.current) {

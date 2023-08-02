@@ -106,3 +106,34 @@ export const getComicsByFilter = async (title, format, order, startYear) => {
     console.log(error);
   }
 };
+
+export const getComicsById = async (comicsId) => {
+  try {
+    const response = await axios.get(
+      `/comics/${comicsId}?ts=${ts}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data.results[0];
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const getComicsCharactersById = async (comicsId) => {
+  try {
+    const response = await axios.get(
+      `/comics/${comicsId}/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const getComicsCreatorsById = async (comicsId) => {
+  try {
+    const response = await axios.get(
+      `/comics/${comicsId}/creators?ts=${ts}&apikey=${publicKey}&hash=${hash}`
+    );
+    return response.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 // import { DayPicker } from "react-day-picker";
 import icon from "App/assets/images/sprite.svg";
 import moment from "moment";
@@ -15,6 +15,8 @@ export const CustomDayPicker = ({ setDate }) => {
 
   const [selectedDay, setSelectedDay] = useState(dateNow);
   const [IsOpen, setIsOpen] = useState(false);
+  const [currentMonth, setCurrentMonth] = useState();
+  const [currentYear, setCurrentYear] = useState();
   const selectRef = useRef();
   const optionListRef = useRef();
 
@@ -24,11 +26,26 @@ export const CustomDayPicker = ({ setDate }) => {
 
   const handleDaySelect = (date) => {
     if (date) {
-      setDate(moment(date).format("YYYY-MM-DD"));
+      setDate(moment(date).format("YYYY"));
       setSelectedDay(moment(date).format("DD/MM/YYYY"));
+      setCurrentMonth();
+      setCurrentYear();
     }
     setIsOpen(!IsOpen);
   };
+
+  useEffect(() => {
+    if (IsOpen) {
+      const monthAndYearContent = document.querySelector(
+        ".rdp-caption_dropdowns .rdp-vhidden .rdp-caption_label"
+      );
+      monthAndYearContent.innerHTML =
+        monthAndYearContent.textContent.split(" ")[0];
+      console.log(currentMonth);
+      console.log(currentYear);
+    }
+  }, [IsOpen, selectedDay, currentMonth, currentYear]);
+
   return (
     <SelectWrap>
       <Select ref={selectRef} onClick={handleClickOnButton} type="button">
@@ -42,7 +59,13 @@ export const CustomDayPicker = ({ setDate }) => {
           <StyledDayPicker
             selected={selectedDay}
             onSelect={handleDaySelect}
+            month={currentMonth}
+            onMonthChange={setCurrentMonth}
+            year={currentYear}
+            onYearChange={setCurrentYear}
             mode="single"
+            captionLayout="dropdown-buttons"
+            fromYear={1970}
             toDate={new Date(moment().format("YYYY, MM, DD"))}
           />
         </WrapDayPicker>
