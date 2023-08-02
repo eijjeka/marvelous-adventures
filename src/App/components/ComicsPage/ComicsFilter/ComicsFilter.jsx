@@ -8,6 +8,7 @@ import { getComicsByFilter } from "App/services/services.js";
 import { useState, useEffect } from "react";
 import { ComicsCardList } from "App/components/ComicsPage/ComicsList/ComicsList";
 import { ComicsModal } from "./../ComicsModal/ComicsModal";
+import { moment } from "moment";
 import {
   FilterForm,
   WrapperSelect,
@@ -19,6 +20,7 @@ import {
 } from "./ComicsFilter.styled";
 
 export const ComicsFilter = (second) => {
+  // console.log(moment().format("DD/MM/YYYY"));
   const [Data, setData] = useState(null);
   const [idCurrentCard, setIdCurrentCard] = useState("");
   const [title, setTitle] = useState("");

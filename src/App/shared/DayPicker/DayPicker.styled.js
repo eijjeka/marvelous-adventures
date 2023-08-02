@@ -85,6 +85,54 @@ export const StyledDayPicker = styled(DayPicker)`
     color: gray;
     transform: scale(0.7);
   }
+
+  .rdp-dropdown {
+    background-color: var(--secondary-bg-color);
+    border: none;
+    color: var(--main-text-color);
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* Стилизация ползунка скроллбара (только для браузеров, поддерживающих WebKit) */
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--panther-color); /* Цвет ползунка */
+      border-radius: 5px;
+    }
+
+    /* Стилизация ползунка при наведении (только для браузеров, поддерживающих WebKit) */
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: var(--panther-color);
+    }
+  }
+
+  .rdp-caption_label {
+    /* display: none; */
+  }
+
+  .rdp-dropdown_month {
+    display: none;
+  }
+  .rdp-dropdown_year {
+    display: flex;
+    justify-content: space-between;
+
+    & .rdp-caption_label {
+      display: none;
+    }
+  }
+  .rdp-caption .rdp-caption_dropdowns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rdp-dropdown_year .rdp-vhidden {
+    display: none;
+  }
 `;
 
 export const SelectWrap = styled.div`
@@ -124,7 +172,7 @@ export const WrapDayPicker = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5px 10px;
-  background-color: #171717;
+  background-color: var(--secondary-bg-color);
   border-radius: 16px;
   list-style: none;
 
